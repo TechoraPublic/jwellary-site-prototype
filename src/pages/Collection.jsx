@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import ProductGrid from '../components/ProductGrid';
 import { products as allProducts } from '../data/products';
+import { SlidersHorizontal, X } from 'lucide-react';
+import './Collection.css';
 
 const Collection = () => {
   const { categoryId } = useParams();
@@ -11,6 +13,7 @@ const Collection = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState(categoryId || 'All');
   const [sortOption, setSortOption] = useState('Featured');
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   
   const categories = ['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings'];
 
@@ -68,85 +71,149 @@ const Collection = () => {
       {/* Filter and Search Bar */}
       <div style={{ 
         display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
+        flexDirection: 'column',
         padding: '1.5rem 0',
         borderTop: '1px solid rgba(217, 164, 65, 0.3)',
         borderBottom: '1px solid rgba(217, 164, 65, 0.3)',
         marginBottom: '3rem',
-        flexWrap: 'wrap',
-        gap: '1.5rem'
+        gap: '1rem'
       }}>
         
-        {/* Search */}
-        <div style={{ position: 'relative', flex: '1', minWidth: '250px', maxWidth: '350px' }}>
-          <Search style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-gold)' }} size={18} />
-          <input 
-            type="text" 
-            placeholder="Search products..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ 
-              width: '100%', 
-              padding: '0.75rem 1rem 0.75rem 2.8rem', 
-              borderRadius: '2px', 
-              border: '1px solid rgba(217, 164, 65, 0.5)',
-              outline: 'none',
-              fontFamily: 'var(--font-sans)',
-              fontSize: '0.95rem',
-              backgroundColor: 'transparent',
-              color: 'var(--color-navy)'
-            }} 
-          />
+        {/* Desktop Layout: Search + Categories + Sort */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', width: '100%' }}>
+          {/* Search */}
+          <div style={{ position: 'relative', flex: '1', minWidth: '250px' }}>
+            <Search style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-gold)' }} size={18} />
+            <input 
+              type="text" 
+              placeholder="Search products..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ 
+                width: '100%', 
+                padding: '0.75rem 1rem 0.75rem 2.8rem', 
+                borderRadius: '8px', 
+                border: '1px solid #e0e0e0',
+                outline: 'none',
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.95rem',
+                backgroundColor: '#f9f9f9',
+                color: 'var(--color-navy)'
+              }} 
+            />
+          </div>
+
+          <div className="desktop-filters">
+            {/* Category Pills */}
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', flex: '2', justifyContent: 'center' }}>
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  style={{
+                    padding: '0.5rem 1.25rem',
+                    borderRadius: '20px',
+                    border: '1px solid',
+                    borderColor: activeCategory === cat ? 'var(--color-navy)' : 'rgba(217, 164, 65, 0.5)',
+                    backgroundColor: activeCategory === cat ? 'var(--color-navy)' : 'transparent',
+                    color: activeCategory === cat ? 'var(--color-ivory)' : 'var(--color-navy)',
+                    transition: 'all 0.2s',
+                    fontWeight: '500',
+                    fontSize: '0.9rem'
+                  }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Sort Dropdown */}
+            <div style={{ minWidth: '200px' }}>
+              <select 
+                value={sortOption} 
+                onChange={(e) => setSortOption(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  borderRadius: '2px',
+                  border: '1px solid rgba(217, 164, 65, 0.5)',
+                  outline: 'none',
+                  backgroundColor: 'transparent',
+                  color: 'var(--color-navy)',
+                  fontFamily: 'var(--font-sans)',
+                  cursor: 'pointer',
+                  fontSize: '0.95rem'
+                }}
+              >
+                <option value="Featured">Featured</option>
+                <option value="Price: Low to High">Price: Low to High</option>
+                <option value="Price: High to Low">Price: High to Low</option>
+                <option value="Top Rated">Top Rated</option>
+                <option value="Best Selling">Best Selling</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        {/* Category Pills */}
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', flex: '2', justifyContent: 'center' }}>
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              style={{
-                padding: '0.5rem 1.25rem',
-                borderRadius: '20px',
-                border: '1px solid',
-                borderColor: activeCategory === cat ? 'var(--color-navy)' : 'rgba(217, 164, 65, 0.5)',
-                backgroundColor: activeCategory === cat ? 'var(--color-navy)' : 'transparent',
-                color: activeCategory === cat ? 'var(--color-ivory)' : 'var(--color-navy)',
-                transition: 'all 0.2s',
-                fontWeight: '500',
-                fontSize: '0.9rem'
-              }}
-            >
-              {cat}
+        {/* Mobile Filter Button */}
+        <button 
+          className="mobile-filter-btn"
+          onClick={() => setIsMobileFilterOpen(true)}
+        >
+          <SlidersHorizontal size={18} /> Filter & Sort
+        </button>
+      </div>
+
+      {/* Mobile Modal */}
+      <div className={`mobile-modal-overlay ${isMobileFilterOpen ? 'open' : ''}`}>
+        <div className="mobile-modal-content">
+          <div className="modal-header">
+            <h3>Filter & Sort</h3>
+            <button className="modal-close" onClick={() => setIsMobileFilterOpen(false)}>
+              <X size={24} />
             </button>
-          ))}
-        </div>
+          </div>
 
-        {/* Sort Dropdown */}
-        <div style={{ minWidth: '200px' }}>
-          <select 
-            value={sortOption} 
-            onChange={(e) => setSortOption(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '0.75rem 1rem',
-              borderRadius: '2px',
-              border: '1px solid rgba(217, 164, 65, 0.5)',
-              outline: 'none',
-              backgroundColor: 'transparent',
-              color: 'var(--color-navy)',
-              fontFamily: 'var(--font-sans)',
-              cursor: 'pointer',
-              fontSize: '0.95rem'
-            }}
-          >
-            <option value="Featured">Featured</option>
-            <option value="Price: Low to High">Price: Low to High</option>
-            <option value="Price: High to Low">Price: High to Low</option>
-            <option value="Top Rated">Top Rated</option>
-            <option value="Best Selling">Best Selling</option>
-          </select>
+          <div className="filter-section-title">CATEGORY</div>
+          <div className="mobile-categories">
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                style={{
+                  padding: '0.5rem 1.25rem',
+                  borderRadius: '20px',
+                  border: '1px solid',
+                  borderColor: activeCategory === cat ? 'var(--color-navy)' : '#e0e0e0',
+                  backgroundColor: activeCategory === cat ? 'var(--color-navy)' : 'transparent',
+                  color: activeCategory === cat ? 'var(--color-ivory)' : 'var(--color-navy)',
+                  fontWeight: '500',
+                  fontSize: '0.9rem'
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <div className="filter-section-title">SORT BY</div>
+          <div className="mobile-sort-options">
+            {['Featured', 'Price: Low to High', 'Price: High to Low', 'Top Rated', 'Best Selling'].map(option => (
+              <div 
+                key={option}
+                className={`sort-option ${sortOption === option ? 'active' : ''}`}
+                onClick={() => setSortOption(option)}
+              >
+                {option}
+              </div>
+            ))}
+          </div>
+
+          <div className="modal-footer">
+            <button className="show-products-btn" onClick={() => setIsMobileFilterOpen(false)}>
+              Show {products.length} Products
+            </button>
+          </div>
         </div>
       </div>
 

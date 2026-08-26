@@ -10,7 +10,7 @@ const Contact = () => {
 
   return (
     <div style={{ backgroundColor: 'var(--color-ivory)', minHeight: '100vh' }}>
-      
+
       {/* Contact Hero */}
       <div style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', paddingTop: '160px', paddingBottom: '100px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <ScrollReveal className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -25,25 +25,25 @@ const Contact = () => {
             Whether you're looking for a signature piece, a meaningful gift, or simply wish to know more about our collections, we'd love to hear from you.
           </p>
         </ScrollReveal>
-        
+
         {/* Subtle Decorative Element */}
         <div style={{ position: 'absolute', top: '-10%', right: '-5%', opacity: 0.05, transform: 'scale(1.5)', pointerEvents: 'none' }}>
-           <svg width="400" height="400" viewBox="0 0 100 100" fill="currentColor">
-              <path d="M50 0 C60 40 100 50 100 50 C60 60 50 100 50 100 C40 60 0 50 0 50 C40 40 50 0 50 0 Z" />
-           </svg>
+          <svg width="400" height="400" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M50 0 C60 40 100 50 100 50 C60 60 50 100 50 100 C40 60 0 50 0 50 C40 40 50 0 50 0 Z" />
+          </svg>
         </div>
       </div>
 
       <div className="container section">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem', alignItems: 'start' }}>
-          
+
           {/* Left Column: Contact Information */}
           <ScrollReveal delay={0.2} style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', padding: '3.5rem', borderRadius: '4px', position: 'relative', overflow: 'hidden' }}>
-            
+
             <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(217, 164, 65, 0.3)', paddingBottom: '1rem' }}>
               Contact Information
             </h2>
-            
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
               {/* Phone */}
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem' }}>
@@ -59,7 +59,7 @@ const Contact = () => {
                 <Mail size={24} color="var(--color-gold)" style={{ strokeWidth: 1.5 }} />
                 <div>
                   <h3 style={{ fontSize: '0.75rem', color: 'var(--color-gold)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem', fontFamily: 'var(--font-sans)' }}>Email</h3>
-                  <p style={{ fontSize: '1.1rem', fontWeight: '300', letterSpacing: '1px' }}>support@bluebell.com</p>
+                  <p style={{ fontSize: '1.1rem', fontWeight: '300', letterSpacing: '1px' }}>support@Bluebells.com</p>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                 We typically respond to all enquiries within 24 business hours.
               </p>
             </div>
-            
+
           </ScrollReveal>
 
           {/* Right Column: Form */}
@@ -104,7 +104,7 @@ const Contact = () => {
                 <div style={{ width: '40px', height: '1px', backgroundColor: 'var(--color-gold)', opacity: 0.5 }}></div>
               </div>
             </div>
-            
+
             <form onSubmit={(e) => e.preventDefault()}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
                 <div>
@@ -150,16 +150,16 @@ const Contact = () => {
               </div>
 
               <button type="submit" className="btn" style={{ width: '100%', padding: '1.25rem', backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', border: '1px solid var(--color-gold)', borderRadius: '2px', fontSize: '0.85rem', letterSpacing: '2px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', transition: 'all 0.4s ease' }}
-              onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-gold)'; e.currentTarget.style.color = 'var(--color-navy)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-navy)'; e.currentTarget.style.color = 'var(--color-ivory)'; }}>
+                onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-gold)'; e.currentTarget.style.color = 'var(--color-navy)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-navy)'; e.currentTarget.style.color = 'var(--color-ivory)'; }}>
                 Send Message <Send size={16} />
               </button>
             </form>
           </ScrollReveal>
-          
+
         </div>
       </div>
-      
+
       <style>{`
         input:focus, select:focus, textarea:focus {
           border-color: var(--color-gold) !important;

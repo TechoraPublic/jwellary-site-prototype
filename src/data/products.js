@@ -542,7 +542,7 @@ export const products = [
   },
   {
     "id": "silver-leaf-ring",
-    "name": "Silver leaf free size ring 199",
+    "name": "Silver leaf free size ring",
     "category": "rings",
     "price": 199,
     "description": "Beautiful rings crafted with precision. Silver leaf free size ring 199.",

@@ -22,11 +22,11 @@ const About = () => {
       </ScrollReveal>
 
       {/* Story Image */}
-      <div style={{ height: '60vh', marginBottom: '6rem' }}>
-        <ImageReveal
-          src="/images/Other/aboutus.jpg"
-          alt="Jewellery Making"
-          delay={0.6}
+      <div style={{ width: '100%', marginBottom: '6rem' }}>
+        <img
+          src="img/Our_story.png"
+          alt="Our_story"
+          style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px' }}
         />
       </div>
 

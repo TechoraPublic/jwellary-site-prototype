@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Hero from '../components/Hero';
 import ProductGrid from '../components/ProductGrid';
-import { getFeaturedProducts } from '../data/products';
+import { products as allProducts } from '../data/products';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/animations/ScrollReveal';
 import ImageReveal from '../components/animations/ImageReveal';
 import GoldDivider from '../components/animations/GoldDivider';
 
 const Home = () => {
-  const featuredProducts = getFeaturedProducts();
+  const [visibleCount, setVisibleCount] = useState(8);
+  const displayedProducts = allProducts.slice(0, visibleCount);
 
   return (
     <div>
@@ -17,21 +18,31 @@ const Home = () => {
       {/* Featured Collection Section */}
       <section className="section container">
         <ScrollReveal className="text-center" style={{ marginBottom: '4rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-navy)' }}>Featured Collection</h2>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-navy)' }}>Our Collection</h2>
           <GoldDivider style={{ marginBottom: '2rem' }} />
           <p style={{ color: 'var(--color-navy-light)', maxWidth: '600px', margin: '0 auto' }}>
-            Discover our most coveted pieces, designed to be cherished for a lifetime.
+            Discover our complete range of exquisite jewellery.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <ProductGrid products={featuredProducts} columns={4} />
+          <ProductGrid products={displayedProducts} columns={4} />
         </ScrollReveal>
 
         <ScrollReveal className="text-center" style={{ marginTop: '4rem' }} delay={0.4}>
-          <Link to="/collection/rings" className="btn btn-primary">
-            View All Collections
-          </Link>
+          {visibleCount < allProducts.length ? (
+            <button 
+              onClick={() => setVisibleCount(prev => prev + 8)} 
+              className="btn btn-primary"
+              style={{ cursor: 'pointer' }}
+            >
+              View More Collection
+            </button>
+          ) : (
+            <Link to="/shop" className="btn btn-primary">
+              View All Collections
+            </Link>
+          )}
         </ScrollReveal>
       </section>
 
