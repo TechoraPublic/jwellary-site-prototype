@@ -1,0 +1,100 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-image-wrapper {
+  position: relative;
+  display: block;
+  aspect-ratio: 4/5;
+  background-color: var(--color-pearl);
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.quick-view {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(3, 22, 55, 0.95); /* Navy with slight transparency */
+  color: var(--color-ivory);
+  text-align: center;
+  padding: 1.25rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+  border-top: 1px solid var(--color-gold);
+}
+
+.product-card:hover .quick-view {
+  transform: translateY(0);
+}
+
+.product-info {
+  text-align: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-info {
+  transform: translateY(-5px);
+}
+
+.product-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-navy);
+  transition: var(--transition-fast);
+}
+
+.product-name:hover {
+  color: var(--color-gold);
+}
+
+.product-price {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-navy-light);
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: var(--color-gray-warm);
+  font-size: 0.85rem;
+}
+
+.new-arrival-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #E6DCD1; /* Soft beige/champagne */
+  color: #555;
+  padding: 0.2rem 1rem;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  z-index: 10;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  padding-right: 1.5rem;
+}
