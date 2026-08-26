@@ -37,23 +37,23 @@ const PageLoader = ({ onComplete }) => {
         duration: 0.6,
         ease: 'power2.out'
       })
-      .to(lineRef.current, {
-        scaleX: 1,
-        duration: 0.4,
-        ease: 'power3.out'
-      }, '-=0.2')
-      .to(textRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: 'power2.out'
-      }, '-=0.2')
-      .to(containerRef.current, {
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power2.inOut',
-        delay: 0.3
-      });
+        .to(lineRef.current, {
+          scaleX: 1,
+          duration: 0.4,
+          ease: 'power3.out'
+        }, '-=0.2')
+        .to(textRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          ease: 'power2.out'
+        }, '-=0.2')
+        .to(containerRef.current, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.inOut',
+          delay: 0.3
+        });
 
     }, containerRef);
 
@@ -63,7 +63,7 @@ const PageLoader = ({ onComplete }) => {
   if (!isAnimating) return null;
 
   return (
-    <div 
+    <div
       ref={containerRef}
       style={{
         position: 'fixed',
@@ -80,13 +80,13 @@ const PageLoader = ({ onComplete }) => {
         color: 'var(--color-ivory)'
       }}
     >
-      <img 
+      <img
         ref={logoRef}
-        src="/images/Other/blue-bell-jewellery-logo.png" 
-        alt="Blue Bell Jewellery" 
-        style={{ height: '80px', marginBottom: '2rem', willChange: 'transform, opacity' }} 
+        src="/img/blue_bell/logo.png"
+        alt="Blue Bell Jewellery"
+        style={{ height: '80px', marginBottom: '2rem', willChange: 'transform, opacity' }}
       />
-      <div 
+      <div
         ref={lineRef}
         style={{
           width: '60px',
@@ -97,7 +97,7 @@ const PageLoader = ({ onComplete }) => {
           willChange: 'transform'
         }}
       />
-      <p 
+      <p
         ref={textRef}
         style={{
           fontFamily: 'var(--font-sans)',

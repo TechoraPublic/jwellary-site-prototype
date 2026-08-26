@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      
+
       {/* Featured Collection Section */}
       <section className="section container">
         <ScrollReveal className="text-center" style={{ marginBottom: '4rem' }}>
@@ -23,11 +23,11 @@ const Home = () => {
             Discover our most coveted pieces, designed to be cherished for a lifetime.
           </p>
         </ScrollReveal>
-        
+
         <ScrollReveal delay={0.2}>
           <ProductGrid products={featuredProducts} columns={4} />
         </ScrollReveal>
-        
+
         <ScrollReveal className="text-center" style={{ marginTop: '4rem' }} delay={0.4}>
           <Link to="/collection/rings" className="btn btn-primary">
             View All Collections
@@ -48,7 +48,7 @@ const Home = () => {
             </Link>
           </ScrollReveal>
           <div>
-             <ImageReveal src="/images/Rings/gold-delicate-band-ring-product.jpg" alt="Craftsmanship" style={{ maxHeight: '500px' }} delay={0.2} />
+            <ImageReveal src="img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg" alt="Craftsmanship" style={{ maxHeight: '500px' }} delay={0.2} />
           </div>
         </div>
       </section>

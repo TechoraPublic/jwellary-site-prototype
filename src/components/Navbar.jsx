@@ -26,9 +26,9 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
-        
+
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="mobile-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -37,16 +37,21 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/images/Other/blue-bell-jewellery-logo.png" alt="Blue Bell Jewellery" style={{ height: '50px' }} />
+          <img src="/img/blue_bell/logo.png" alt="Blue Bell Jewellery" />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Navigation Menu */}
         <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/shop">Collections</Link></li>
-          <li><Link to="/new-arrivals">New Arrivals</Link></li>
-          <li><Link to="/about">Our Story</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li className="mobile-only-logo">
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+              <img src="/img/blue_bell/logo.png" alt="Blue Bell Jewellery" />
+            </Link>
+          </li>
+          <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/shop" onClick={() => setIsMobileMenuOpen(false)}>Collections</Link></li>
+          <li><Link to="/new-arrivals" onClick={() => setIsMobileMenuOpen(false)}>New Arrivals</Link></li>
+          <li><Link to="/about" onClick={() => setIsMobileMenuOpen(false)}>Our Story</Link></li>
+          <li><Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link></li>
         </ul>
 
         {/* Actions */}

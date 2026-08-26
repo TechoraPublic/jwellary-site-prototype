@@ -1,1118 +1,561 @@
 export const products = [
   {
-    "id": "b1",
-    "name": "Gold beaded bangle held",
-    "category": "bangles",
-    "price": 782,
-    "description": "Beautiful bangles crafted with precision. Gold beaded bangle held.",
-    "image": "/images/Bangles/gold-beaded-bangle-held.jpg",
+    "id": "gold-blue-floral-necklace",
+    "name": "Tulip necklace",
+    "category": "necklaces",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. Tulip necklace.",
+    "image": "/img/01-gold-blue-floral-necklace/tulip-necklace-1.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 978
+    "originalPrice": 373,
+    "images": [
+      "/img/01-gold-blue-floral-necklace/tulip-necklace-1.jpg",
+      "/img/01-gold-blue-floral-necklace/tulip-necklace-2.jpg",
+      "/img/01-gold-blue-floral-necklace/tulip-necklace-3.jpg",
+      "/img/01-gold-blue-floral-necklace/tulip-necklace-4.jpg",
+      "/img/01-gold-blue-floral-necklace/tulip-necklace-5.jpg"
+    ]
   },
   {
-    "id": "b2",
-    "name": "Gold butterfly bangle product",
-    "category": "bangles",
-    "price": 1807,
-    "description": "Beautiful bangles crafted with precision. Gold butterfly bangle product.",
-    "image": "/images/Bangles/gold-butterfly-bangle-product.jpg",
-    "featured": false
+    "id": "gold-blue-stone-ring",
+    "name": "Gold Blue Stone Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Blue Stone Ring.",
+    "image": "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-1.jpg",
+      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-2.jpg",
+      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-3.jpg",
+      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-4.jpg"
+    ]
   },
   {
-    "id": "b3",
-    "name": "Gold circle bangle product",
+    "id": "gold-butterfly-bangle",
+    "name": "Grace Bow Bracelet",
     "category": "bangles",
-    "price": 1580,
-    "description": "Beautiful bangles crafted with precision. Gold circle bangle product.",
-    "image": "/images/Bangles/gold-circle-bangle-product.jpg",
-    "featured": false
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Grace Bow Bracelet.",
+    "image": "/img/03-gold-butterfly-bangle/grace-bow-bracelet.jpg",
+    "featured": false,
+    "images": [
+      "/img/03-gold-butterfly-bangle/grace-bow-bracelet.jpg"
+    ]
   },
   {
-    "id": "b4",
-    "name": "Gold double heart bangle product view01",
-    "category": "bangles",
-    "price": 740,
-    "description": "Beautiful bangles crafted with precision. Gold double heart bangle product view01.",
-    "image": "/images/Bangles/gold-double-heart-bangle-product-view01.jpg",
+    "id": "gold-chain-bracelet",
+    "name": "Gold Chain Bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Chain Bracelet.",
+    "image": "/img/04-gold-chain-bracelet/gold-chain-bracelet-1.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 925
+    "originalPrice": 1248,
+    "images": [
+      "/img/04-gold-chain-bracelet/gold-chain-bracelet-1.jpg",
+      "/img/04-gold-chain-bracelet/gold-chain-bracelet-2.jpg",
+      "/img/04-gold-chain-bracelet/gold-chain-bracelet-3.jpg",
+      "/img/04-gold-chain-bracelet/gold-chain-bracelet-4.jpg",
+      "/img/04-gold-chain-bracelet/gold-chain-bracelet-5.jpg"
+    ]
   },
   {
-    "id": "b5",
-    "name": "Gold double heart bangle product view02",
-    "category": "bangles",
-    "price": 765,
-    "description": "Beautiful bangles crafted with precision. Gold double heart bangle product view02.",
-    "image": "/images/Bangles/gold-double-heart-bangle-product-view02.jpg",
-    "featured": false
+    "id": "gold-charm-bracelet",
+    "name": "Gold Charm Bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Charm Bracelet.",
+    "image": "/img/05-gold-charm-bracelet/gold-charm-bracelet.jpg",
+    "featured": false,
+    "images": [
+      "/img/05-gold-charm-bracelet/gold-charm-bracelet.jpg"
+    ]
   },
   {
-    "id": "b6",
-    "name": "Gold double heart bangle product view03",
+    "id": "gold-circle-bangle",
+    "name": "Gold Circle Bangle",
     "category": "bangles",
-    "price": 1689,
-    "description": "Beautiful bangles crafted with precision. Gold double heart bangle product view03.",
-    "image": "/images/Bangles/gold-double-heart-bangle-product-view03.jpg",
-    "featured": true
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Gold Circle Bangle.",
+    "image": "/img/06-gold-circle-bangle/gold-circle-bangle.jpg",
+    "featured": false,
+    "images": [
+      "/img/06-gold-circle-bangle/gold-circle-bangle.jpg"
+    ]
   },
   {
-    "id": "b7",
-    "name": "Gold floral bangle product",
-    "category": "bangles",
-    "price": 4620,
-    "description": "Beautiful bangles crafted with precision. Gold floral bangle product.",
-    "image": "/images/Bangles/gold-floral-bangle-product.jpg",
+    "id": "gold-circle-charm-bracelet",
+    "name": "Aurelia Halo Bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Aurelia Halo Bracelet.",
+    "image": "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-1.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "originalPrice": 1248,
+    "images": [
+      "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-1.jpg",
+      "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-2.jpg"
+    ]
+  },
+  {
+    "id": "gold-delicate-band-ring",
+    "name": "Golden Solitaire Ring - Free size",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Golden Solitaire Ring - Free size.",
+    "image": "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg",
     "featured": true,
     "isNewArrival": true,
-    "originalPrice": 5775
+    "originalPrice": 248,
+    "images": [
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg",
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-2.jpg",
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-3.jpg",
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-4.jpg",
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-5.jpg",
+      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-6.jpg"
+    ]
   },
   {
-    "id": "b8",
-    "name": "Gold floral charm bangle product",
+    "id": "gold-delicate-bracelet",
+    "name": "Infinity Grace bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Infinity Grace bracelet.",
+    "image": "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-1.jpg",
+      "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-2.jpg"
+    ]
+  },
+  {
+    "id": "gold-delicate-charm-bracelet",
+    "name": "Gold Delicate Charm Bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Delicate Charm Bracelet.",
+    "image": "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-1.jpg",
+    "featured": true,
+    "images": [
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-1.jpg",
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-2.jpg",
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-3.jpg",
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-4.jpg",
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-5.jpg",
+      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-6.jpg"
+    ]
+  },
+  {
+    "id": "gold-delicate-floral-bracelet",
+    "name": "Elysian Petals bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Elysian Petals bracelet.",
+    "image": "/img/11-gold-delicate-floral-bracelet/elysian-petals-bracelet.jpg",
+    "featured": false,
+    "images": [
+      "/img/11-gold-delicate-floral-bracelet/elysian-petals-bracelet.jpg"
+    ]
+  },
+  {
+    "id": "gold-delicate-ring",
+    "name": "Gold Delicate Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Delicate Ring.",
+    "image": "/img/12-gold-delicate-ring/gold-delicate-ring-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/12-gold-delicate-ring/gold-delicate-ring-1.jpg",
+      "/img/12-gold-delicate-ring/gold-delicate-ring-2.jpg",
+      "/img/12-gold-delicate-ring/gold-delicate-ring-3.jpg",
+      "/img/12-gold-delicate-ring/gold-delicate-ring-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-double-heart-bangle",
+    "name": "Celestia Love Bangle",
     "category": "bangles",
-    "price": 2622,
-    "description": "Beautiful bangles crafted with precision. Gold floral charm bangle product.",
-    "image": "/images/Bangles/gold-floral-charm-bangle-product.jpg",
-    "featured": false
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Celestia Love Bangle.",
+    "image": "/img/13-gold-double-heart-bangle/celestia-love-bangle-1.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "originalPrice": 1248,
+    "images": [
+      "/img/13-gold-double-heart-bangle/celestia-love-bangle-1.jpg",
+      "/img/13-gold-double-heart-bangle/celestia-love-bangle-2.jpg",
+      "/img/13-gold-double-heart-bangle/celestia-love-bangle-3.jpg"
+    ]
   },
   {
-    "id": "b9",
-    "name": "Gold star bangle product",
+    "id": "gold-floral-bangle",
+    "name": "Gold Floral Bangle",
     "category": "bangles",
-    "price": 2220,
-    "description": "Beautiful bangles crafted with precision. Gold star bangle product.",
-    "image": "/images/Bangles/gold-star-bangle-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "b10",
-    "name": "Gold chain bracelet on wrist view01",
-    "category": "bracelets",
-    "price": 539,
-    "description": "Beautiful bracelets crafted with precision. Gold chain bracelet on wrist view01.",
-    "image": "/images/Bracelets/gold-chain-bracelet-on-wrist-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 674
-  },
-  {
-    "id": "b11",
-    "name": "Gold chain bracelet on wrist view02",
-    "category": "bracelets",
-    "price": 4830,
-    "description": "Beautiful bracelets crafted with precision. Gold chain bracelet on wrist view02.",
-    "image": "/images/Bracelets/gold-chain-bracelet-on-wrist-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "b12",
-    "name": "Gold chain bracelet on wrist view03",
-    "category": "bracelets",
-    "price": 2427,
-    "description": "Beautiful bracelets crafted with precision. Gold chain bracelet on wrist view03.",
-    "image": "/images/Bracelets/gold-chain-bracelet-on-wrist-view03.jpg",
-    "featured": true
-  },
-  {
-    "id": "b13",
-    "name": "Gold chain bracelet product view01",
-    "category": "bracelets",
-    "price": 2732,
-    "description": "Beautiful bracelets crafted with precision. Gold chain bracelet product view01.",
-    "image": "/images/Bracelets/gold-chain-bracelet-product-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 3415
-  },
-  {
-    "id": "b14",
-    "name": "Gold chain bracelet product view02",
-    "category": "bracelets",
-    "price": 1078,
-    "description": "Beautiful bracelets crafted with precision. Gold chain bracelet product view02.",
-    "image": "/images/Bracelets/gold-chain-bracelet-product-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "b15",
-    "name": "Gold charm bracelet closeup",
-    "category": "bracelets",
-    "price": 2934,
-    "description": "Beautiful bracelets crafted with precision. Gold charm bracelet closeup.",
-    "image": "/images/Bracelets/gold-charm-bracelet-closeup.jpg",
-    "featured": false
-  },
-  {
-    "id": "b16",
-    "name": "Gold circle charm bracelet on wrist view01",
-    "category": "bracelets",
-    "price": 971,
-    "description": "Beautiful bracelets crafted with precision. Gold circle charm bracelet on wrist view01.",
-    "image": "/images/Bracelets/gold-circle-charm-bracelet-on-wrist-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1214
-  },
-  {
-    "id": "b17",
-    "name": "Gold circle charm bracelet on wrist view02",
-    "category": "bracelets",
-    "price": 2905,
-    "description": "Beautiful bracelets crafted with precision. Gold circle charm bracelet on wrist view02.",
-    "image": "/images/Bracelets/gold-circle-charm-bracelet-on-wrist-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "b18",
-    "name": "Gold delicate bracelet on wrist view01",
-    "category": "bracelets",
-    "price": 4678,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate bracelet on wrist view01.",
-    "image": "/images/Bracelets/gold-delicate-bracelet-on-wrist-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "b19",
-    "name": "Gold delicate bracelet on wrist view02",
-    "category": "bracelets",
-    "price": 2955,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate bracelet on wrist view02.",
-    "image": "/images/Bracelets/gold-delicate-bracelet-on-wrist-view02.jpg",
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Gold Floral Bangle.",
+    "image": "/img/14-gold-floral-bangle/gold-floral-bangle.jpg",
     "featured": true,
     "isNewArrival": true,
-    "originalPrice": 3694
+    "originalPrice": 1248,
+    "images": [
+      "/img/14-gold-floral-bangle/gold-floral-bangle.jpg"
+    ]
   },
   {
-    "id": "b20",
-    "name": "Gold delicate charm bracelet flatlay view01",
+    "id": "gold-floral-bracelet",
+    "name": "Gold Floral Bracelet",
     "category": "bracelets",
-    "price": 1022,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet flatlay view01.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-flatlay-view01.jpg",
-    "featured": true
-  },
-  {
-    "id": "b21",
-    "name": "Gold delicate charm bracelet flatlay view02",
-    "category": "bracelets",
-    "price": 646,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet flatlay view02.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-flatlay-view02.jpg",
-    "featured": true
-  },
-  {
-    "id": "b22",
-    "name": "Gold delicate charm bracelet on wrist closeup",
-    "category": "bracelets",
-    "price": 1353,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet on wrist closeup.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-on-wrist-closeup.jpg",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Floral Bracelet.",
+    "image": "/img/15-gold-floral-bracelet/gold-floral-bracelet-1.jpg",
     "featured": true,
-    "isNewArrival": true,
-    "originalPrice": 1691
+    "images": [
+      "/img/15-gold-floral-bracelet/gold-floral-bracelet-1.jpg",
+      "/img/15-gold-floral-bracelet/gold-floral-bracelet-2.jpg"
+    ]
   },
   {
-    "id": "b23",
-    "name": "Gold delicate charm bracelet on wrist view01",
-    "category": "bracelets",
-    "price": 2747,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet on wrist view01.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-on-wrist-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "b24",
-    "name": "Gold delicate charm bracelet on wrist view02",
-    "category": "bracelets",
-    "price": 2368,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet on wrist view02.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-on-wrist-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "b25",
-    "name": "Gold delicate charm bracelet product",
-    "category": "bracelets",
-    "price": 1185,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate charm bracelet product.",
-    "image": "/images/Bracelets/gold-delicate-charm-bracelet-product.jpg",
+    "id": "gold-floral-charm-bangle",
+    "name": "Gold Floral Charm Bangle",
+    "category": "bangles",
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Gold Floral Charm Bangle.",
+    "image": "/img/16-gold-floral-charm-bangle/gold-floral-charm-bangle.jpg",
     "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1481
+    "images": [
+      "/img/16-gold-floral-charm-bangle/gold-floral-charm-bangle.jpg"
+    ]
   },
   {
-    "id": "b26",
-    "name": "Gold delicate floral bracelet on wrist",
+    "id": "gold-floral-charm-bracelet",
+    "name": "Gold Floral Charm Bracelet",
     "category": "bracelets",
-    "price": 3528,
-    "description": "Beautiful bracelets crafted with precision. Gold delicate floral bracelet on wrist.",
-    "image": "/images/Bracelets/gold-delicate-floral-bracelet-on-wrist.jpg",
-    "featured": false
-  },
-  {
-    "id": "b27",
-    "name": "Gold floral bracelet flatlay",
-    "category": "bracelets",
-    "price": 4682,
-    "description": "Beautiful bracelets crafted with precision. Gold floral bracelet flatlay.",
-    "image": "/images/Bracelets/gold-floral-bracelet-flatlay.jpg",
-    "featured": true
-  },
-  {
-    "id": "b28",
-    "name": "Gold floral bracelet on wrist",
-    "category": "bracelets",
-    "price": 1161,
-    "description": "Beautiful bracelets crafted with precision. Gold floral bracelet on wrist.",
-    "image": "/images/Bracelets/gold-floral-bracelet-on-wrist.jpg",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Floral Charm Bracelet.",
+    "image": "/img/17-gold-floral-charm-bracelet/gold-floral-charm-bracelet.jpg",
     "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1451
+    "images": [
+      "/img/17-gold-floral-charm-bracelet/gold-floral-charm-bracelet.jpg"
+    ]
   },
   {
-    "id": "b29",
-    "name": "Gold floral charm bracelet product",
-    "category": "bracelets",
-    "price": 892,
-    "description": "Beautiful bracelets crafted with precision. Gold floral charm bracelet product.",
-    "image": "/images/Bracelets/gold-floral-charm-bracelet-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "b30",
-    "name": "Gold green floral bracelet flatlay",
-    "category": "bracelets",
-    "price": 2612,
-    "description": "Beautiful bracelets crafted with precision. Gold green floral bracelet flatlay.",
-    "image": "/images/Bracelets/gold-green-floral-bracelet-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "b31",
-    "name": "Gold green floral bracelet on wrist view01",
-    "category": "bracelets",
-    "price": 1730,
-    "description": "Beautiful bracelets crafted with precision. Gold green floral bracelet on wrist view01.",
-    "image": "/images/Bracelets/gold-green-floral-bracelet-on-wrist-view01.jpg",
+    "id": "gold-floral-cluster-ring",
+    "name": "Gold Floral Cluster Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Floral Cluster Ring.",
+    "image": "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-1.jpg",
     "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 2163
+    "images": [
+      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-1.jpg",
+      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-2.jpg",
+      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-3.jpg",
+      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-4.jpg"
+    ]
   },
   {
-    "id": "b32",
-    "name": "Gold green floral bracelet on wrist view02",
-    "category": "bracelets",
-    "price": 3335,
-    "description": "Beautiful bracelets crafted with precision. Gold green floral bracelet on wrist view02.",
-    "image": "/images/Bracelets/gold-green-floral-bracelet-on-wrist-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "b33",
-    "name": "Gold green floral bracelet product",
-    "category": "bracelets",
-    "price": 2239,
-    "description": "Beautiful bracelets crafted with precision. Gold green floral bracelet product.",
-    "image": "/images/Bracelets/gold-green-floral-bracelet-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "e34",
-    "name": "Gold floral earring held",
+    "id": "gold-floral-earring",
+    "name": "Gold Floral Earring",
     "category": "earrings",
-    "price": 1838,
-    "description": "Beautiful earrings crafted with precision. Gold floral earring held.",
-    "image": "/images/Earrings/gold-floral-earring-held.jpg",
+    "price": 999,
+    "description": "Beautiful earrings crafted with precision. Gold Floral Earring.",
+    "image": "/img/19-gold-floral-earring/gold-floral-earring.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 2298
+    "originalPrice": 1248,
+    "images": [
+      "/img/19-gold-floral-earring/gold-floral-earring.jpg"
+    ]
   },
   {
-    "id": "e35",
-    "name": "Gold floral earrings closeup",
+    "id": "gold-floral-earrings",
+    "name": "Gold Floral Earrings",
     "category": "earrings",
-    "price": 4347,
-    "description": "Beautiful earrings crafted with precision. Gold floral earrings closeup.",
-    "image": "/images/Earrings/gold-floral-earrings-closeup.jpg",
-    "featured": false
+    "price": 999,
+    "description": "Beautiful earrings crafted with precision. Gold Floral Earrings.",
+    "image": "/img/20-gold-floral-earrings/gold-floral-earrings.jpg",
+    "featured": false,
+    "images": [
+      "/img/20-gold-floral-earrings/gold-floral-earrings.jpg"
+    ]
   },
   {
-    "id": "e36",
-    "name": "Gold pink stone earring held",
+    "id": "gold-floral-pendant-necklace",
+    "name": "White swan necklace",
+    "category": "necklaces",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. White swan necklace.",
+    "image": "/img/21-gold-floral-pendant-necklace/white-swan-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-1.jpg",
+      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-2.jpg",
+      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-3.jpg"
+    ]
+  },
+  {
+    "id": "gold-floral-ring",
+    "name": "The Golden Aurelia Ring - Free size",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. The Golden Aurelia Ring - Free size.",
+    "image": "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-1.jpg",
+      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-2.jpg",
+      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-3.jpg"
+    ]
+  },
+  {
+    "id": "gold-green-floral-bracelet",
+    "name": "Gold Green Floral Bracelet",
+    "category": "bracelets",
+    "price": 999,
+    "description": "Beautiful bracelets crafted with precision. Gold Green Floral Bracelet.",
+    "image": "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-1.jpg",
+      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-2.jpg",
+      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-3.jpg",
+      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-heart-layered-necklace",
+    "name": "Gold Heart Layered Necklace",
+    "category": "necklaces",
+    "price": 999,
+    "description": "Beautiful necklaces crafted with precision. Gold Heart Layered Necklace.",
+    "image": "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-1.jpg",
+      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-2.jpg",
+      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-3.jpg",
+      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-heart-necklace",
+    "name": "Golden bow necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. Golden bow necklace.",
+    "image": "/img/25-gold-heart-necklace/golden-bow-necklace-1.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "originalPrice": 311,
+    "images": [
+      "/img/25-gold-heart-necklace/golden-bow-necklace-1.jpg",
+      "/img/25-gold-heart-necklace/golden-bow-necklace-2.jpg",
+      "/img/25-gold-heart-necklace/golden-bow-necklace-3.jpg",
+      "/img/25-gold-heart-necklace/golden-bow-necklace-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-heart-stone-ring",
+    "name": "Gold Heart Stone Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Heart Stone Ring.",
+    "image": "/img/26-gold-heart-stone-ring/gold-heart-stone-ring.jpg",
+    "featured": true,
+    "images": [
+      "/img/26-gold-heart-stone-ring/gold-heart-stone-ring.jpg"
+    ]
+  },
+  {
+    "id": "gold-multicolor-floral-necklace",
+    "name": "Gold Multicolor Floral Necklace",
+    "category": "necklaces",
+    "price": 999,
+    "description": "Beautiful necklaces crafted with precision. Gold Multicolor Floral Necklace.",
+    "image": "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-1.jpg",
+      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-2.jpg",
+      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-3.jpg",
+      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-4.jpg",
+      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-5.jpg"
+    ]
+  },
+  {
+    "id": "gold-pink-floral-necklace",
+    "name": "The Aura Monarch necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. The Aura Monarch necklace.",
+    "image": "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-1.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "originalPrice": 311,
+    "images": [
+      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-1.jpg",
+      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-2.jpg",
+      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-3.jpg",
+      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-4.jpg",
+      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-5.jpg"
+    ]
+  },
+  {
+    "id": "gold-pink-round-pendant-necklace",
+    "name": "Gold Pink Round Pendant Necklace",
+    "category": "necklaces",
+    "price": 999,
+    "description": "Beautiful necklaces crafted with precision. Gold Pink Round Pendant Necklace.",
+    "image": "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-1.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-2.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-3.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-4.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-5.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-6.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-7.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-8.jpg",
+      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-9.jpg"
+    ]
+  },
+  {
+    "id": "gold-pink-stone-earring",
+    "name": "Gold Pink Stone Earring",
     "category": "earrings",
-    "price": 4194,
-    "description": "Beautiful earrings crafted with precision. Gold pink stone earring held.",
-    "image": "/images/Earrings/gold-pink-stone-earring-held.jpg",
-    "featured": false
+    "price": 999,
+    "description": "Beautiful earrings crafted with precision. Gold Pink Stone Earring.",
+    "image": "/img/30-gold-pink-stone-earring/gold-pink-stone-earring.jpg",
+    "featured": false,
+    "images": [
+      "/img/30-gold-pink-stone-earring/gold-pink-stone-earring.jpg"
+    ]
   },
   {
-    "id": "n37",
-    "name": "Gold blue floral necklace closeup",
+    "id": "gold-pink-stone-pendant-necklace",
+    "name": "Purple swan necklace",
     "category": "necklaces",
-    "price": 3432,
-    "description": "Beautiful necklaces crafted with precision. Gold blue floral necklace closeup.",
-    "image": "/images/Necklaces/gold-blue-floral-necklace-closeup.jpg",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. Purple swan necklace.",
+    "image": "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-1.jpg",
+      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-2.jpg",
+      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-3.jpg",
+      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-pink-stone-ring",
+    "name": "Gold Pink Stone Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Pink Stone Ring.",
+    "image": "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-1.jpg",
+      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-2.jpg",
+      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-3.jpg"
+    ]
+  },
+  {
+    "id": "gold-purple-stone-ring",
+    "name": "Gold Purple Stone Ring",
+    "category": "rings",
+    "price": 999,
+    "description": "Beautiful rings crafted with precision. Gold Purple Stone Ring.",
+    "image": "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-1.jpg",
+      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-2.jpg",
+      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-3.jpg",
+      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-4.jpg"
+    ]
+  },
+  {
+    "id": "gold-round-pendant-necklace",
+    "name": "Gold Round Pendant Necklace",
+    "category": "necklaces",
+    "price": 999,
+    "description": "Beautiful necklaces crafted with precision. Gold Round Pendant Necklace.",
+    "image": "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 4290
+    "originalPrice": 1248,
+    "images": [
+      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg",
+      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-2.jpg",
+      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-3.jpg",
+      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-4.jpg"
+    ]
   },
   {
-    "id": "n38",
-    "name": "Gold blue floral necklace flatlay",
+    "id": "gold-small-heart-necklace",
+    "name": "Gold Small Heart Necklace",
     "category": "necklaces",
-    "price": 1994,
-    "description": "Beautiful necklaces crafted with precision. Gold blue floral necklace flatlay.",
-    "image": "/images/Necklaces/gold-blue-floral-necklace-flatlay.jpg",
-    "featured": false
+    "price": 999,
+    "description": "Beautiful necklaces crafted with precision. Gold Small Heart Necklace.",
+    "image": "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-1.jpg",
+    "featured": false,
+    "images": [
+      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-1.jpg",
+      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-2.jpg",
+      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-3.jpg",
+      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-4.jpg"
+    ]
   },
   {
-    "id": "n39",
-    "name": "Gold blue floral necklace on model view01",
-    "category": "necklaces",
-    "price": 2064,
-    "description": "Beautiful necklaces crafted with precision. Gold blue floral necklace on model view01.",
-    "image": "/images/Necklaces/gold-blue-floral-necklace-on-model-view01.jpg",
-    "featured": true
+    "id": "gold-star-bangle",
+    "name": "Gold Star Bangle",
+    "category": "bangles",
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Gold Star Bangle.",
+    "image": "/img/36-gold-star-bangle/gold-star-bangle.jpg",
+    "featured": false,
+    "images": [
+      "/img/36-gold-star-bangle/gold-star-bangle.jpg"
+    ]
   },
   {
-    "id": "n40",
-    "name": "Gold blue floral necklace on model view02",
-    "category": "necklaces",
-    "price": 1489,
-    "description": "Beautiful necklaces crafted with precision. Gold blue floral necklace on model view02.",
-    "image": "/images/Necklaces/gold-blue-floral-necklace-on-model-view02.jpg",
+    "id": "gold-beaded-bangle",
+    "name": "Gold Beaded Bangle",
+    "category": "bangles",
+    "price": 999,
+    "description": "Beautiful bangles crafted with precision. Gold Beaded Bangle.",
+    "image": "/img/37-gold-beaded-bangle/gold-beaded-bangle.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 1861
+    "originalPrice": 1248,
+    "images": [
+      "/img/37-gold-beaded-bangle/gold-beaded-bangle.jpg"
+    ]
   },
   {
-    "id": "n41",
-    "name": "Gold blue floral necklace product",
-    "category": "necklaces",
-    "price": 4049,
-    "description": "Beautiful necklaces crafted with precision. Gold blue floral necklace product.",
-    "image": "/images/Necklaces/gold-blue-floral-necklace-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "n42",
-    "name": "Gold floral pendant necklace flatlay",
-    "category": "necklaces",
-    "price": 2901,
-    "description": "Beautiful necklaces crafted with precision. Gold floral pendant necklace flatlay.",
-    "image": "/images/Necklaces/gold-floral-pendant-necklace-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "n43",
-    "name": "Gold floral pendant necklace model",
-    "category": "necklaces",
-    "price": 1211,
-    "description": "Beautiful necklaces crafted with precision. Gold floral pendant necklace model.",
-    "image": "/images/Necklaces/gold-floral-pendant-necklace-model.jpg",
+    "id": "silver-leaf-ring",
+    "name": "Silver leaf free size ring 199",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Silver leaf free size ring 199.",
+    "image": "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-1.jpg",
     "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1514
-  },
-  {
-    "id": "n44",
-    "name": "Gold floral pendant necklace on model",
-    "category": "necklaces",
-    "price": 605,
-    "description": "Beautiful necklaces crafted with precision. Gold floral pendant necklace on model.",
-    "image": "/images/Necklaces/gold-floral-pendant-necklace-on-model.jpg",
-    "featured": true
-  },
-  {
-    "id": "n45",
-    "name": "Gold heart layered necklace flatlay",
-    "category": "necklaces",
-    "price": 1083,
-    "description": "Beautiful necklaces crafted with precision. Gold heart layered necklace flatlay.",
-    "image": "/images/Necklaces/gold-heart-layered-necklace-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "n46",
-    "name": "Gold heart layered necklace model",
-    "category": "necklaces",
-    "price": 3024,
-    "description": "Beautiful necklaces crafted with precision. Gold heart layered necklace model.",
-    "image": "/images/Necklaces/gold-heart-layered-necklace-model.jpg",
-    "featured": true,
-    "isNewArrival": true,
-    "originalPrice": 3780
-  },
-  {
-    "id": "n47",
-    "name": "Gold heart layered necklace on model view01",
-    "category": "necklaces",
-    "price": 1534,
-    "description": "Beautiful necklaces crafted with precision. Gold heart layered necklace on model view01.",
-    "image": "/images/Necklaces/gold-heart-layered-necklace-on-model-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "n48",
-    "name": "Gold heart layered necklace on model view02",
-    "category": "necklaces",
-    "price": 3625,
-    "description": "Beautiful necklaces crafted with precision. Gold heart layered necklace on model view02.",
-    "image": "/images/Necklaces/gold-heart-layered-necklace-on-model-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "n49",
-    "name": "Gold heart necklace flatlay",
-    "category": "necklaces",
-    "price": 745,
-    "description": "Beautiful necklaces crafted with precision. Gold heart necklace flatlay.",
-    "image": "/images/Necklaces/gold-heart-necklace-flatlay.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 931
-  },
-  {
-    "id": "n50",
-    "name": "Gold heart necklace on model view01",
-    "category": "necklaces",
-    "price": 2687,
-    "description": "Beautiful necklaces crafted with precision. Gold heart necklace on model view01.",
-    "image": "/images/Necklaces/gold-heart-necklace-on-model-view01.jpg",
-    "featured": true
-  },
-  {
-    "id": "n51",
-    "name": "Gold heart necklace on model view02",
-    "category": "necklaces",
-    "price": 2180,
-    "description": "Beautiful necklaces crafted with precision. Gold heart necklace on model view02.",
-    "image": "/images/Necklaces/gold-heart-necklace-on-model-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "n52",
-    "name": "Gold heart necklace product",
-    "category": "necklaces",
-    "price": 2304,
-    "description": "Beautiful necklaces crafted with precision. Gold heart necklace product.",
-    "image": "/images/Necklaces/gold-heart-necklace-product.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 2880
-  },
-  {
-    "id": "n53",
-    "name": "Gold multicolor floral necklace closeup",
-    "category": "necklaces",
-    "price": 4397,
-    "description": "Beautiful necklaces crafted with precision. Gold multicolor floral necklace closeup.",
-    "image": "/images/Necklaces/gold-multicolor-floral-necklace-closeup.jpg",
-    "featured": false
-  },
-  {
-    "id": "n54",
-    "name": "Gold multicolor floral necklace flatlay",
-    "category": "necklaces",
-    "price": 4787,
-    "description": "Beautiful necklaces crafted with precision. Gold multicolor floral necklace flatlay.",
-    "image": "/images/Necklaces/gold-multicolor-floral-necklace-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "n55",
-    "name": "Gold multicolor floral necklace on model view01",
-    "category": "necklaces",
-    "price": 1059,
-    "description": "Beautiful necklaces crafted with precision. Gold multicolor floral necklace on model view01.",
-    "image": "/images/Necklaces/gold-multicolor-floral-necklace-on-model-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1324
-  },
-  {
-    "id": "n56",
-    "name": "Gold multicolor floral necklace on model view02",
-    "category": "necklaces",
-    "price": 2794,
-    "description": "Beautiful necklaces crafted with precision. Gold multicolor floral necklace on model view02.",
-    "image": "/images/Necklaces/gold-multicolor-floral-necklace-on-model-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "n57",
-    "name": "Gold multicolor floral necklace product",
-    "category": "necklaces",
-    "price": 1070,
-    "description": "Beautiful necklaces crafted with precision. Gold multicolor floral necklace product.",
-    "image": "/images/Necklaces/gold-multicolor-floral-necklace-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "n58",
-    "name": "Gold pink floral necklace closeup",
-    "category": "necklaces",
-    "price": 3232,
-    "description": "Beautiful necklaces crafted with precision. Gold pink floral necklace closeup.",
-    "image": "/images/Necklaces/gold-pink-floral-necklace-closeup.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 4040
-  },
-  {
-    "id": "n59",
-    "name": "Gold pink floral necklace on hand",
-    "category": "necklaces",
-    "price": 4966,
-    "description": "Beautiful necklaces crafted with precision. Gold pink floral necklace on hand.",
-    "image": "/images/Necklaces/gold-pink-floral-necklace-on-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "n60",
-    "name": "Gold pink floral necklace on model view01",
-    "category": "necklaces",
-    "price": 3045,
-    "description": "Beautiful necklaces crafted with precision. Gold pink floral necklace on model view01.",
-    "image": "/images/Necklaces/gold-pink-floral-necklace-on-model-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "n61",
-    "name": "Gold pink floral necklace on model view02",
-    "category": "necklaces",
-    "price": 2513,
-    "description": "Beautiful necklaces crafted with precision. Gold pink floral necklace on model view02.",
-    "image": "/images/Necklaces/gold-pink-floral-necklace-on-model-view02.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 3141
-  },
-  {
-    "id": "n62",
-    "name": "Gold pink floral necklace product",
-    "category": "necklaces",
-    "price": 2361,
-    "description": "Beautiful necklaces crafted with precision. Gold pink floral necklace product.",
-    "image": "/images/Necklaces/gold-pink-floral-necklace-product.jpg",
-    "featured": true
-  },
-  {
-    "id": "n63",
-    "name": "Gold pink round pendant necklace dark",
-    "category": "necklaces",
-    "price": 4552,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace dark.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-dark.jpg",
-    "featured": false
-  },
-  {
-    "id": "n64",
-    "name": "Gold pink round pendant necklace flatlay",
-    "category": "necklaces",
-    "price": 3856,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace flatlay.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-flatlay.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 4820
-  },
-  {
-    "id": "n65",
-    "name": "Gold pink round pendant necklace on hand",
-    "category": "necklaces",
-    "price": 1341,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace on hand.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-on-hand.jpg",
-    "featured": true
-  },
-  {
-    "id": "n66",
-    "name": "Gold pink round pendant necklace on model view01",
-    "category": "necklaces",
-    "price": 2043,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace on model view01.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-on-model-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "n67",
-    "name": "Gold pink round pendant necklace on model view02",
-    "category": "necklaces",
-    "price": 743,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace on model view02.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-on-model-view02.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 929
-  },
-  {
-    "id": "n68",
-    "name": "Gold pink round pendant necklace on model view03",
-    "category": "necklaces",
-    "price": 2588,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace on model view03.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-on-model-view03.jpg",
-    "featured": false
-  },
-  {
-    "id": "n69",
-    "name": "Gold pink round pendant necklace on model view04",
-    "category": "necklaces",
-    "price": 995,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace on model view04.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-on-model-view04.jpg",
-    "featured": true
-  },
-  {
-    "id": "n70",
-    "name": "Gold pink round pendant necklace product view01",
-    "category": "necklaces",
-    "price": 4848,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace product view01.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-product-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 6060
-  },
-  {
-    "id": "n71",
-    "name": "Gold pink round pendant necklace product view02",
-    "category": "necklaces",
-    "price": 3909,
-    "description": "Beautiful necklaces crafted with precision. Gold pink round pendant necklace product view02.",
-    "image": "/images/Necklaces/gold-pink-round-pendant-necklace-product-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "n72",
-    "name": "Gold pink stone pendant necklace dark",
-    "category": "necklaces",
-    "price": 1307,
-    "description": "Beautiful necklaces crafted with precision. Gold pink stone pendant necklace dark.",
-    "image": "/images/Necklaces/gold-pink-stone-pendant-necklace-dark.jpg",
-    "featured": false
-  },
-  {
-    "id": "n73",
-    "name": "Gold pink stone pendant necklace flatlay",
-    "category": "necklaces",
-    "price": 2001,
-    "description": "Beautiful necklaces crafted with precision. Gold pink stone pendant necklace flatlay.",
-    "image": "/images/Necklaces/gold-pink-stone-pendant-necklace-flatlay.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 2501
-  },
-  {
-    "id": "n74",
-    "name": "Gold pink stone pendant necklace on model",
-    "category": "necklaces",
-    "price": 2506,
-    "description": "Beautiful necklaces crafted with precision. Gold pink stone pendant necklace on model.",
-    "image": "/images/Necklaces/gold-pink-stone-pendant-necklace-on-model.jpg",
-    "featured": false
-  },
-  {
-    "id": "n75",
-    "name": "Gold pink stone pendant necklace",
-    "category": "necklaces",
-    "price": 3916,
-    "description": "Beautiful necklaces crafted with precision. Gold pink stone pendant necklace.",
-    "image": "/images/Necklaces/gold-pink-stone-pendant-necklace.jpg",
-    "featured": true
-  },
-  {
-    "id": "n76",
-    "name": "Gold round pendant necklace dark",
-    "category": "necklaces",
-    "price": 2900,
-    "description": "Beautiful necklaces crafted with precision. Gold round pendant necklace dark.",
-    "image": "/images/Necklaces/gold-round-pendant-necklace-dark.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 3625
-  },
-  {
-    "id": "n77",
-    "name": "Gold round pendant necklace flatlay",
-    "category": "necklaces",
-    "price": 4205,
-    "description": "Beautiful necklaces crafted with precision. Gold round pendant necklace flatlay.",
-    "image": "/images/Necklaces/gold-round-pendant-necklace-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "n78",
-    "name": "Gold round pendant necklace hand",
-    "category": "necklaces",
-    "price": 3693,
-    "description": "Beautiful necklaces crafted with precision. Gold round pendant necklace hand.",
-    "image": "/images/Necklaces/gold-round-pendant-necklace-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "n79",
-    "name": "Gold round pendant necklace on model",
-    "category": "necklaces",
-    "price": 1262,
-    "description": "Beautiful necklaces crafted with precision. Gold round pendant necklace on model.",
-    "image": "/images/Necklaces/gold-round-pendant-necklace-on-model.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1578
-  },
-  {
-    "id": "n80",
-    "name": "Gold small heart necklace flatlay",
-    "category": "necklaces",
-    "price": 579,
-    "description": "Beautiful necklaces crafted with precision. Gold small heart necklace flatlay.",
-    "image": "/images/Necklaces/gold-small-heart-necklace-flatlay.jpg",
-    "featured": false
-  },
-  {
-    "id": "n81",
-    "name": "Gold small heart necklace on hand",
-    "category": "necklaces",
-    "price": 4095,
-    "description": "Beautiful necklaces crafted with precision. Gold small heart necklace on hand.",
-    "image": "/images/Necklaces/gold-small-heart-necklace-on-hand.jpg",
-    "featured": true
-  },
-  {
-    "id": "n82",
-    "name": "Gold small heart necklace on model view01",
-    "category": "necklaces",
-    "price": 4997,
-    "description": "Beautiful necklaces crafted with precision. Gold small heart necklace on model view01.",
-    "image": "/images/Necklaces/gold-small-heart-necklace-on-model-view01.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 6246
-  },
-  {
-    "id": "n83",
-    "name": "Gold small heart necklace on model view02",
-    "category": "necklaces",
-    "price": 1864,
-    "description": "Beautiful necklaces crafted with precision. Gold small heart necklace on model view02.",
-    "image": "/images/Necklaces/gold-small-heart-necklace-on-model-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "r84",
-    "name": "Gold blue stone ring closeup",
-    "category": "rings",
-    "price": 2134,
-    "description": "Beautiful rings crafted with precision. Gold blue stone ring closeup.",
-    "image": "/images/Rings/gold-blue-stone-ring-closeup.jpg",
-    "featured": false
-  },
-  {
-    "id": "r85",
-    "name": "Gold blue stone ring held",
-    "category": "rings",
-    "price": 1636,
-    "description": "Beautiful rings crafted with precision. Gold blue stone ring held.",
-    "image": "/images/Rings/gold-blue-stone-ring-held.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 2045
-  },
-  {
-    "id": "r86",
-    "name": "Gold blue stone ring on hand view01",
-    "category": "rings",
-    "price": 3812,
-    "description": "Beautiful rings crafted with precision. Gold blue stone ring on hand view01.",
-    "image": "/images/Rings/gold-blue-stone-ring-on-hand-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "r87",
-    "name": "Gold blue stone ring on hand view02",
-    "category": "rings",
-    "price": 2427,
-    "description": "Beautiful rings crafted with precision. Gold blue stone ring on hand view02.",
-    "image": "/images/Rings/gold-blue-stone-ring-on-hand-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "r88",
-    "name": "Gold delicate band ring closeup",
-    "category": "rings",
-    "price": 4014,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring closeup.",
-    "image": "/images/Rings/gold-delicate-band-ring-closeup.jpg",
-    "featured": true,
-    "isNewArrival": true,
-    "originalPrice": 5018
-  },
-  {
-    "id": "r89",
-    "name": "Gold delicate band ring held",
-    "category": "rings",
-    "price": 1724,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring held.",
-    "image": "/images/Rings/gold-delicate-band-ring-held.jpg",
-    "featured": true
-  },
-  {
-    "id": "r90",
-    "name": "Gold delicate band ring on finger",
-    "category": "rings",
-    "price": 2423,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring on finger.",
-    "image": "/images/Rings/gold-delicate-band-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r91",
-    "name": "Gold delicate band ring on hand view01",
-    "category": "rings",
-    "price": 852,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring on hand view01.",
-    "image": "/images/Rings/gold-delicate-band-ring-on-hand-view01.jpg",
-    "featured": false
-  },
-  {
-    "id": "r92",
-    "name": "Gold delicate band ring on hand view02",
-    "category": "rings",
-    "price": 2679,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring on hand view02.",
-    "image": "/images/Rings/gold-delicate-band-ring-on-hand-view02.jpg",
-    "featured": false
-  },
-  {
-    "id": "r93",
-    "name": "Gold delicate band ring product",
-    "category": "rings",
-    "price": 2977,
-    "description": "Beautiful rings crafted with precision. Gold delicate band ring product.",
-    "image": "/images/Rings/gold-delicate-band-ring-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "r94",
-    "name": "Gold delicate ring on finger",
-    "category": "rings",
-    "price": 1752,
-    "description": "Beautiful rings crafted with precision. Gold delicate ring on finger.",
-    "image": "/images/Rings/gold-delicate-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r95",
-    "name": "Gold delicate ring on fingers",
-    "category": "rings",
-    "price": 4534,
-    "description": "Beautiful rings crafted with precision. Gold delicate ring on fingers.",
-    "image": "/images/Rings/gold-delicate-ring-on-fingers.jpg",
-    "featured": false
-  },
-  {
-    "id": "r96",
-    "name": "Gold delicate ring on hand",
-    "category": "rings",
-    "price": 2080,
-    "description": "Beautiful rings crafted with precision. Gold delicate ring on hand.",
-    "image": "/images/Rings/gold-delicate-ring-on-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r97",
-    "name": "Gold delicate ring product",
-    "category": "rings",
-    "price": 4837,
-    "description": "Beautiful rings crafted with precision. Gold delicate ring product.",
-    "image": "/images/Rings/gold-delicate-ring-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "r98",
-    "name": "Gold floral cluster ring hand",
-    "category": "rings",
-    "price": 966,
-    "description": "Beautiful rings crafted with precision. Gold floral cluster ring hand.",
-    "image": "/images/Rings/gold-floral-cluster-ring-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r99",
-    "name": "Gold floral cluster ring model",
-    "category": "rings",
-    "price": 3840,
-    "description": "Beautiful rings crafted with precision. Gold floral cluster ring model.",
-    "image": "/images/Rings/gold-floral-cluster-ring-model.jpg",
-    "featured": true
-  },
-  {
-    "id": "r100",
-    "name": "Gold floral cluster ring on finger",
-    "category": "rings",
-    "price": 3946,
-    "description": "Beautiful rings crafted with precision. Gold floral cluster ring on finger.",
-    "image": "/images/Rings/gold-floral-cluster-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r101",
-    "name": "Gold floral cluster ring product",
-    "category": "rings",
-    "price": 3131,
-    "description": "Beautiful rings crafted with precision. Gold floral cluster ring product.",
-    "image": "/images/Rings/gold-floral-cluster-ring-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "r102",
-    "name": "Gold floral ring hand",
-    "category": "rings",
-    "price": 4805,
-    "description": "Beautiful rings crafted with precision. Gold floral ring hand.",
-    "image": "/images/Rings/gold-floral-ring-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r103",
-    "name": "Gold floral ring on finger",
-    "category": "rings",
-    "price": 2921,
-    "description": "Beautiful rings crafted with precision. Gold floral ring on finger.",
-    "image": "/images/Rings/gold-floral-ring-on-finger.jpg",
-    "featured": true
-  },
-  {
-    "id": "r104",
-    "name": "Gold floral ring on hand",
-    "category": "rings",
-    "price": 1885,
-    "description": "Beautiful rings crafted with precision. Gold floral ring on hand.",
-    "image": "/images/Rings/gold-floral-ring-on-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r105",
-    "name": "Gold heart stone ring closeup",
-    "category": "rings",
-    "price": 4132,
-    "description": "Beautiful rings crafted with precision. Gold heart stone ring closeup.",
-    "image": "/images/Rings/gold-heart-stone-ring-closeup.jpg",
-    "featured": true
-  },
-  {
-    "id": "r106",
-    "name": "Gold pink stone ring closeup",
-    "category": "rings",
-    "price": 2791,
-    "description": "Beautiful rings crafted with precision. Gold pink stone ring closeup.",
-    "image": "/images/Rings/gold-pink-stone-ring-closeup.jpg",
-    "featured": false
-  },
-  {
-    "id": "r107",
-    "name": "Gold pink stone ring on finger",
-    "category": "rings",
-    "price": 1656,
-    "description": "Beautiful rings crafted with precision. Gold pink stone ring on finger.",
-    "image": "/images/Rings/gold-pink-stone-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r108",
-    "name": "Gold pink stone ring on hand",
-    "category": "rings",
-    "price": 2386,
-    "description": "Beautiful rings crafted with precision. Gold pink stone ring on hand.",
-    "image": "/images/Rings/gold-pink-stone-ring-on-hand.jpg",
-    "featured": true
-  },
-  {
-    "id": "r109",
-    "name": "Gold purple stone ring held",
-    "category": "rings",
-    "price": 4465,
-    "description": "Beautiful rings crafted with precision. Gold purple stone ring held.",
-    "image": "/images/Rings/gold-purple-stone-ring-held.jpg",
-    "featured": false
-  },
-  {
-    "id": "r110",
-    "name": "Gold purple stone ring on finger",
-    "category": "rings",
-    "price": 4588,
-    "description": "Beautiful rings crafted with precision. Gold purple stone ring on finger.",
-    "image": "/images/Rings/gold-purple-stone-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r111",
-    "name": "Gold purple stone ring on hand",
-    "category": "rings",
-    "price": 2624,
-    "description": "Beautiful rings crafted with precision. Gold purple stone ring on hand.",
-    "image": "/images/Rings/gold-purple-stone-ring-on-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r112",
-    "name": "Gold purple stone ring product",
-    "category": "rings",
-    "price": 2882,
-    "description": "Beautiful rings crafted with precision. Gold purple stone ring product.",
-    "image": "/images/Rings/gold-purple-stone-ring-product.jpg",
-    "featured": false
-  },
-  {
-    "id": "r113",
-    "name": "Silver leaf ring on finger",
-    "category": "rings",
-    "price": 2159,
-    "description": "Beautiful rings crafted with precision. Silver leaf ring on finger.",
-    "image": "/images/Rings/silver-leaf-ring-on-finger.jpg",
-    "featured": false
-  },
-  {
-    "id": "r114",
-    "name": "Silver leaf ring on hand",
-    "category": "rings",
-    "price": 4800,
-    "description": "Beautiful rings crafted with precision. Silver leaf ring on hand.",
-    "image": "/images/Rings/silver-leaf-ring-on-hand.jpg",
-    "featured": false
-  },
-  {
-    "id": "r115",
-    "name": "Silver leaf ring product fabric",
-    "category": "rings",
-    "price": 2156,
-    "description": "Beautiful rings crafted with precision. Silver leaf ring product fabric.",
-    "image": "/images/Rings/silver-leaf-ring-product-fabric.jpg",
-    "featured": false
-  },
-  {
-    "id": "r116",
-    "name": "Silver leaf ring product",
-    "category": "rings",
-    "price": 3906,
-    "description": "Beautiful rings crafted with precision. Silver leaf ring product.",
-    "image": "/images/Rings/silver-leaf-ring-product.jpg",
-    "featured": false
+    "images": [
+      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-1.jpg",
+      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-2.jpg",
+      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-3.jpg",
+      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-4.jpg"
+    ]
   }
 ];
 
-export const getProductsByCategory = (category) => {
-  return products.filter(p => p.category === category);
-};
-
-export const getFeaturedProducts = () => {
-  return products.filter(p => p.featured);
-};
-
-export const getProductById = (id) => {
-  return products.find(p => p.id === id);
-};
+export const getProductById = (id) => products.find(p => p.id === id);
+export const getFeaturedProducts = () => products.filter(p => p.featured);

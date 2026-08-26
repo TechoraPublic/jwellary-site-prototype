@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </ScrollReveal>
         <div style={{ aspectRatio: '1/1' }}>
-          <ImageReveal src="/images/Necklaces/gold-small-heart-necklace-on-model-view02.jpg" alt="Vintage sketch" delay={0.2} />
+          <ImageReveal src="img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg" alt="Vintage sketch" delay={0.2} />
         </div>
       </div>
 
