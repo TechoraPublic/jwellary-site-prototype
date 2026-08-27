@@ -38,7 +38,7 @@ const Contact = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '4rem', alignItems: 'start' }}>
 
           {/* Left Column: Contact Information */}
-          <ScrollReveal delay={0.2} style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', padding: '3.5rem', borderRadius: '4px', position: 'relative', overflow: 'hidden' }}>
+          <ScrollReveal delay={0.2} className="contact-info-column" style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', borderRadius: '4px', position: 'relative', overflow: 'hidden' }}>
 
             <h2 style={{ fontSize: '2rem', marginBottom: '3rem', fontFamily: 'var(--font-serif)', borderBottom: '1px solid rgba(217, 164, 65, 0.3)', paddingBottom: '1rem' }}>
               Contact Information
@@ -94,7 +94,7 @@ const Contact = () => {
           </ScrollReveal>
 
           {/* Right Column: Form */}
-          <ScrollReveal delay={0.4} style={{ padding: '2rem 1rem' }}>
+          <ScrollReveal delay={0.4} className="contact-form-column" style={{}}>
             <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
               <span style={{ color: 'var(--color-gold)', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.75rem', fontWeight: '600' }}>Get In Touch</span>
               <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '1rem', color: 'var(--color-navy)' }}>Send Us a Message</h2>
@@ -164,9 +164,25 @@ const Contact = () => {
         input:focus, select:focus, textarea:focus {
           border-color: var(--color-gold) !important;
         }
+        .contact-info-column {
+          padding: 3.5rem;
+        }
+        .contact-form-column {
+          padding: 2rem 1rem;
+        }
         @media (max-width: 992px) {
           .container.section > div {
             grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 768px) {
+          .contact-info-column {
+            padding: 2rem 1.5rem !important;
+            margin: 0 1rem;
+          }
+          .contact-form-column {
+            padding: 2rem 1rem !important;
+            margin: 0 1rem;
           }
         }
       `}</style>

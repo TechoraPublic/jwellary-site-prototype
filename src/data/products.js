@@ -1,558 +1,485 @@
 export const products = [
   {
-    "id": "gold-blue-floral-necklace",
-    "name": "Tulip necklace",
-    "category": "necklaces",
-    "price": 299,
-    "description": "Beautiful necklaces crafted with precision. Tulip necklace.",
-    "image": "/img/01-gold-blue-floral-necklace/tulip-necklace-1.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 373,
-    "images": [
-      "/img/01-gold-blue-floral-necklace/tulip-necklace-1.jpg",
-      "/img/01-gold-blue-floral-necklace/tulip-necklace-2.jpg",
-      "/img/01-gold-blue-floral-necklace/tulip-necklace-3.jpg",
-      "/img/01-gold-blue-floral-necklace/tulip-necklace-4.jpg",
-      "/img/01-gold-blue-floral-necklace/tulip-necklace-5.jpg"
-    ]
-  },
-  {
-    "id": "gold-blue-stone-ring",
-    "name": "Gold Blue Stone Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Blue Stone Ring.",
-    "image": "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-1.jpg",
-      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-2.jpg",
-      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-3.jpg",
-      "/img/02-gold-blue-stone-ring/gold-blue-stone-ring-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-butterfly-bangle",
-    "name": "Grace Bow Bracelet",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Grace Bow Bracelet.",
-    "image": "/img/03-gold-butterfly-bangle/grace-bow-bracelet.jpg",
-    "featured": false,
-    "images": [
-      "/img/03-gold-butterfly-bangle/grace-bow-bracelet.jpg"
-    ]
-  },
-  {
-    "id": "gold-chain-bracelet",
-    "name": "Gold Chain Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Chain Bracelet.",
-    "image": "/img/04-gold-chain-bracelet/gold-chain-bracelet-1.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1248,
-    "images": [
-      "/img/04-gold-chain-bracelet/gold-chain-bracelet-1.jpg",
-      "/img/04-gold-chain-bracelet/gold-chain-bracelet-2.jpg",
-      "/img/04-gold-chain-bracelet/gold-chain-bracelet-3.jpg",
-      "/img/04-gold-chain-bracelet/gold-chain-bracelet-4.jpg",
-      "/img/04-gold-chain-bracelet/gold-chain-bracelet-5.jpg"
-    ]
-  },
-  {
-    "id": "gold-charm-bracelet",
-    "name": "Gold Charm Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Charm Bracelet.",
-    "image": "/img/05-gold-charm-bracelet/gold-charm-bracelet.jpg",
-    "featured": false,
-    "images": [
-      "/img/05-gold-charm-bracelet/gold-charm-bracelet.jpg"
-    ]
-  },
-  {
-    "id": "gold-circle-bangle",
-    "name": "Gold Circle Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Gold Circle Bangle.",
-    "image": "/img/06-gold-circle-bangle/gold-circle-bangle.jpg",
-    "featured": false,
-    "images": [
-      "/img/06-gold-circle-bangle/gold-circle-bangle.jpg"
-    ]
-  },
-  {
-    "id": "gold-circle-charm-bracelet",
-    "name": "Aurelia Halo Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Aurelia Halo Bracelet.",
-    "image": "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-1.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1248,
-    "images": [
-      "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-1.jpg",
-      "/img/07-gold-circle-charm-bracelet/aurelia-halo-bracelet-2.jpg"
-    ]
-  },
-  {
-    "id": "gold-delicate-band-ring",
-    "name": "Golden Solitaire Ring - Free size",
-    "category": "rings",
-    "price": 199,
-    "description": "Beautiful rings crafted with precision. Golden Solitaire Ring - Free size.",
-    "image": "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg",
-    "featured": true,
-    "isNewArrival": true,
-    "originalPrice": 248,
-    "images": [
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg",
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-2.jpg",
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-3.jpg",
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-4.jpg",
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-5.jpg",
-      "/img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-6.jpg"
-    ]
-  },
-  {
-    "id": "gold-delicate-bracelet",
-    "name": "Infinity Grace bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Infinity Grace bracelet.",
-    "image": "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-1.jpg",
-      "/img/09-gold-delicate-bracelet/infinity-grace-bracelet-2.jpg"
-    ]
-  },
-  {
-    "id": "gold-delicate-charm-bracelet",
-    "name": "Gold Delicate Charm Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Delicate Charm Bracelet.",
-    "image": "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-1.jpg",
-    "featured": true,
-    "images": [
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-1.jpg",
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-2.jpg",
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-3.jpg",
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-4.jpg",
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-5.jpg",
-      "/img/10-gold-delicate-charm-bracelet/gold-delicate-charm-bracelet-6.jpg"
-    ]
-  },
-  {
-    "id": "gold-delicate-floral-bracelet",
-    "name": "Elysian Petals bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Elysian Petals bracelet.",
-    "image": "/img/11-gold-delicate-floral-bracelet/elysian-petals-bracelet.jpg",
-    "featured": false,
-    "images": [
-      "/img/11-gold-delicate-floral-bracelet/elysian-petals-bracelet.jpg"
-    ]
-  },
-  {
-    "id": "gold-delicate-ring",
-    "name": "Gold Delicate Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Delicate Ring.",
-    "image": "/img/12-gold-delicate-ring/gold-delicate-ring-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/12-gold-delicate-ring/gold-delicate-ring-1.jpg",
-      "/img/12-gold-delicate-ring/gold-delicate-ring-2.jpg",
-      "/img/12-gold-delicate-ring/gold-delicate-ring-3.jpg",
-      "/img/12-gold-delicate-ring/gold-delicate-ring-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-double-heart-bangle",
-    "name": "Celestia Love Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Celestia Love Bangle.",
-    "image": "/img/13-gold-double-heart-bangle/celestia-love-bangle-1.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1248,
-    "images": [
-      "/img/13-gold-double-heart-bangle/celestia-love-bangle-1.jpg",
-      "/img/13-gold-double-heart-bangle/celestia-love-bangle-2.jpg",
-      "/img/13-gold-double-heart-bangle/celestia-love-bangle-3.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-bangle",
-    "name": "Gold Floral Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Gold Floral Bangle.",
-    "image": "/img/14-gold-floral-bangle/gold-floral-bangle.jpg",
-    "featured": true,
-    "isNewArrival": true,
-    "originalPrice": 1248,
-    "images": [
-      "/img/14-gold-floral-bangle/gold-floral-bangle.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-bracelet",
-    "name": "Gold Floral Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Floral Bracelet.",
-    "image": "/img/15-gold-floral-bracelet/gold-floral-bracelet-1.jpg",
-    "featured": true,
-    "images": [
-      "/img/15-gold-floral-bracelet/gold-floral-bracelet-1.jpg",
-      "/img/15-gold-floral-bracelet/gold-floral-bracelet-2.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-charm-bangle",
-    "name": "Gold Floral Charm Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Gold Floral Charm Bangle.",
-    "image": "/img/16-gold-floral-charm-bangle/gold-floral-charm-bangle.jpg",
-    "featured": false,
-    "images": [
-      "/img/16-gold-floral-charm-bangle/gold-floral-charm-bangle.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-charm-bracelet",
-    "name": "Gold Floral Charm Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Floral Charm Bracelet.",
-    "image": "/img/17-gold-floral-charm-bracelet/gold-floral-charm-bracelet.jpg",
-    "featured": false,
-    "images": [
-      "/img/17-gold-floral-charm-bracelet/gold-floral-charm-bracelet.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-cluster-ring",
-    "name": "Gold Floral Cluster Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Floral Cluster Ring.",
-    "image": "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-1.jpg",
-      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-2.jpg",
-      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-3.jpg",
-      "/img/18-gold-floral-cluster-ring/gold-floral-cluster-ring-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-earring",
-    "name": "Gold Floral Earring",
-    "category": "earrings",
-    "price": 999,
-    "description": "Beautiful earrings crafted with precision. Gold Floral Earring.",
-    "image": "/img/19-gold-floral-earring/gold-floral-earring.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 1248,
-    "images": [
-      "/img/19-gold-floral-earring/gold-floral-earring.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-earrings",
-    "name": "Gold Floral Earrings",
-    "category": "earrings",
-    "price": 999,
-    "description": "Beautiful earrings crafted with precision. Gold Floral Earrings.",
-    "image": "/img/20-gold-floral-earrings/gold-floral-earrings.jpg",
-    "featured": false,
-    "images": [
-      "/img/20-gold-floral-earrings/gold-floral-earrings.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-pendant-necklace",
-    "name": "White swan necklace",
-    "category": "necklaces",
-    "price": 299,
-    "description": "Beautiful necklaces crafted with precision. White swan necklace.",
-    "image": "/img/21-gold-floral-pendant-necklace/white-swan-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-1.jpg",
-      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-2.jpg",
-      "/img/21-gold-floral-pendant-necklace/white-swan-necklace-3.jpg"
-    ]
-  },
-  {
-    "id": "gold-floral-ring",
-    "name": "The Golden Aurelia Ring - Free size",
-    "category": "rings",
-    "price": 199,
-    "description": "Beautiful rings crafted with precision. The Golden Aurelia Ring - Free size.",
-    "image": "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-1.jpg",
-      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-2.jpg",
-      "/img/22-gold-floral-ring/the-golden-aurelia-ring-free-size-3.jpg"
-    ]
-  },
-  {
-    "id": "gold-green-floral-bracelet",
-    "name": "Gold Green Floral Bracelet",
-    "category": "bracelets",
-    "price": 999,
-    "description": "Beautiful bracelets crafted with precision. Gold Green Floral Bracelet.",
-    "image": "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-1.jpg",
-      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-2.jpg",
-      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-3.jpg",
-      "/img/23-gold-green-floral-bracelet/gold-green-floral-bracelet-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-heart-layered-necklace",
-    "name": "Gold Heart Layered Necklace",
-    "category": "necklaces",
-    "price": 999,
-    "description": "Beautiful necklaces crafted with precision. Gold Heart Layered Necklace.",
-    "image": "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-1.jpg",
-      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-2.jpg",
-      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-3.jpg",
-      "/img/24-gold-heart-layered-necklace/gold-heart-layered-necklace-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-heart-necklace",
+    "id": "golden-bow-necklace",
     "name": "Golden bow necklace",
     "category": "necklaces",
     "price": 249,
     "description": "Beautiful necklaces crafted with precision. Golden bow necklace.",
-    "image": "/img/25-gold-heart-necklace/golden-bow-necklace-1.jpg",
+    "image": "/imagesss/01_Golden bow necklace/01_IMG-20260827-WA0008.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 311,
     "images": [
-      "/img/25-gold-heart-necklace/golden-bow-necklace-1.jpg",
-      "/img/25-gold-heart-necklace/golden-bow-necklace-2.jpg",
-      "/img/25-gold-heart-necklace/golden-bow-necklace-3.jpg",
-      "/img/25-gold-heart-necklace/golden-bow-necklace-4.jpg"
+      "/imagesss/01_Golden bow necklace/01_IMG-20260827-WA0008.jpg",
+      "/imagesss/01_Golden bow necklace/02_IMG-20260827-WA0009.jpg",
+      "/imagesss/01_Golden bow necklace/03_IMG-20260827-WA0010.jpg",
+      "/imagesss/01_Golden bow necklace/04_IMG-20260827-WA0011.jpg"
     ]
   },
   {
-    "id": "gold-heart-stone-ring",
-    "name": "Gold Heart Stone Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Heart Stone Ring.",
-    "image": "/img/26-gold-heart-stone-ring/gold-heart-stone-ring.jpg",
-    "featured": true,
-    "images": [
-      "/img/26-gold-heart-stone-ring/gold-heart-stone-ring.jpg"
-    ]
-  },
-  {
-    "id": "gold-multicolor-floral-necklace",
-    "name": "Gold Multicolor Floral Necklace",
-    "category": "necklaces",
-    "price": 999,
-    "description": "Beautiful necklaces crafted with precision. Gold Multicolor Floral Necklace.",
-    "image": "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-1.jpg",
-      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-2.jpg",
-      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-3.jpg",
-      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-4.jpg",
-      "/img/27-gold-multicolor-floral-necklace/gold-multicolor-floral-necklace-5.jpg"
-    ]
-  },
-  {
-    "id": "gold-pink-floral-necklace",
-    "name": "The Aura Monarch necklace",
-    "category": "necklaces",
-    "price": 249,
-    "description": "Beautiful necklaces crafted with precision. The Aura Monarch necklace.",
-    "image": "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-1.jpg",
-    "featured": false,
-    "isNewArrival": true,
-    "originalPrice": 311,
-    "images": [
-      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-1.jpg",
-      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-2.jpg",
-      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-3.jpg",
-      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-4.jpg",
-      "/img/28-gold-pink-floral-necklace/the-aura-monarch-necklace-5.jpg"
-    ]
-  },
-  {
-    "id": "gold-pink-round-pendant-necklace",
-    "name": "Gold Pink Round Pendant Necklace",
-    "category": "necklaces",
-    "price": 999,
-    "description": "Beautiful necklaces crafted with precision. Gold Pink Round Pendant Necklace.",
-    "image": "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-1.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-2.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-3.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-4.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-5.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-6.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-7.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-8.jpg",
-      "/img/29-gold-pink-round-pendant-necklace/gold-pink-round-pendant-necklace-9.jpg"
-    ]
-  },
-  {
-    "id": "gold-pink-stone-earring",
-    "name": "Gold Pink Stone Earring",
-    "category": "earrings",
-    "price": 999,
-    "description": "Beautiful earrings crafted with precision. Gold Pink Stone Earring.",
-    "image": "/img/30-gold-pink-stone-earring/gold-pink-stone-earring.jpg",
-    "featured": false,
-    "images": [
-      "/img/30-gold-pink-stone-earring/gold-pink-stone-earring.jpg"
-    ]
-  },
-  {
-    "id": "gold-pink-stone-pendant-necklace",
+    "id": "purple-swan-necklace",
     "name": "Purple swan necklace",
     "category": "necklaces",
     "price": 299,
     "description": "Beautiful necklaces crafted with precision. Purple swan necklace.",
-    "image": "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-1.jpg",
-      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-2.jpg",
-      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-3.jpg",
-      "/img/31-gold-pink-stone-pendant-necklace/purple-swan-necklace-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-pink-stone-ring",
-    "name": "Gold Pink Stone Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Pink Stone Ring.",
-    "image": "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-1.jpg",
-      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-2.jpg",
-      "/img/32-gold-pink-stone-ring/gold-pink-stone-ring-3.jpg"
-    ]
-  },
-  {
-    "id": "gold-purple-stone-ring",
-    "name": "Gold Purple Stone Ring",
-    "category": "rings",
-    "price": 999,
-    "description": "Beautiful rings crafted with precision. Gold Purple Stone Ring.",
-    "image": "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-1.jpg",
-      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-2.jpg",
-      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-3.jpg",
-      "/img/33-gold-purple-stone-ring/gold-purple-stone-ring-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-round-pendant-necklace",
-    "name": "Gold Round Pendant Necklace",
-    "category": "necklaces",
-    "price": 999,
-    "description": "Beautiful necklaces crafted with precision. Gold Round Pendant Necklace.",
-    "image": "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg",
+    "image": "/imagesss/02_Purple swan necklace/01_IMG-20260827-WA0004.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 1248,
     "images": [
-      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg",
-      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-2.jpg",
-      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-3.jpg",
-      "/img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-4.jpg"
+      "/imagesss/02_Purple swan necklace/01_IMG-20260827-WA0004.jpg",
+      "/imagesss/02_Purple swan necklace/02_IMG-20260827-WA0005.jpg",
+      "/imagesss/02_Purple swan n`ecklace/03_IMG-20260827-WA0006.jpg",
+      "/imagesss/02_Purple swan necklace/04_IMG-20260827-WA0007.jpg"
     ]
   },
   {
-    "id": "gold-small-heart-necklace",
-    "name": "Gold Small Heart Necklace",
+    "id": "pink-swan-necklace",
+    "name": "Pink swan necklace",
     "category": "necklaces",
-    "price": 999,
-    "description": "Beautiful necklaces crafted with precision. Gold Small Heart Necklace.",
-    "image": "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-1.jpg",
-    "featured": false,
-    "images": [
-      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-1.jpg",
-      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-2.jpg",
-      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-3.jpg",
-      "/img/35-gold-small-heart-necklace/gold-small-heart-necklace-4.jpg"
-    ]
-  },
-  {
-    "id": "gold-star-bangle",
-    "name": "Gold Star Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Gold Star Bangle.",
-    "image": "/img/36-gold-star-bangle/gold-star-bangle.jpg",
-    "featured": false,
-    "images": [
-      "/img/36-gold-star-bangle/gold-star-bangle.jpg"
-    ]
-  },
-  {
-    "id": "gold-beaded-bangle",
-    "name": "Gold Beaded Bangle",
-    "category": "bangles",
-    "price": 999,
-    "description": "Beautiful bangles crafted with precision. Gold Beaded Bangle.",
-    "image": "/img/37-gold-beaded-bangle/gold-beaded-bangle.jpg",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. Pink swan necklace.",
+    "image": "/imagesss/03_Pink swan necklace/01_IMG-20260827-WA0012.jpg",
     "featured": false,
     "isNewArrival": true,
-    "originalPrice": 1248,
     "images": [
-      "/img/37-gold-beaded-bangle/gold-beaded-bangle.jpg"
+      "/imagesss/03_Pink swan necklace/01_IMG-20260827-WA0012.jpg",
+      "/imagesss/03_Pink swan necklace/02_IMG-20260827-WA0013.jpg",
+      "/imagesss/03_Pink swan necklace/03_IMG-20260827-WA0014.jpg",
+      "/imagesss/03_Pink swan necklace/04_IMG-20260827-WA0015.jpg"
     ]
   },
   {
-    "id": "silver-leaf-ring",
+    "id": "white-swan-necklace",
+    "name": "White swan necklace",
+    "category": "necklaces",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. White swan necklace.",
+    "image": "/imagesss/04_White swan necklace/01_IMG-20260825-WA0008.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/04_White swan necklace/01_IMG-20260825-WA0008.jpg",
+      "/imagesss/04_White swan necklace/02_IMG-20260825-WA0009.jpg",
+      "/imagesss/04_White swan necklace/03_IMG-20260825-WA0010.jpg",
+      "/imagesss/04_White swan necklace/04_IMG-20260827-WA0086.jpg"
+    ]
+  },
+  {
+    "id": "tulip-necklace",
+    "name": "Tulip necklace",
+    "category": "necklaces",
+    "price": 299,
+    "description": "Beautiful necklaces crafted with precision. Tulip necklace.",
+    "image": "/imagesss/05_Tulip necklace/01_IMG-20260827-WA0035.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/05_Tulip necklace/01_IMG-20260827-WA0035.jpg",
+      "/imagesss/05_Tulip necklace/02_IMG-20260827-WA0036.jpg",
+      "/imagesss/05_Tulip necklace/03_IMG-20260827-WA0037.jpg",
+      "/imagesss/05_Tulip necklace/04_IMG-20260827-WA0038.jpg"
+    ]
+  },
+  {
+    "id": "ruby-embrace-teddy-necklace",
+    "name": "Ruby Embrace Teddy Necklace",
+    "category": "necklaces",
+    "price": 649,
+    "description": "Beautiful necklaces crafted with precision. Ruby Embrace Teddy Necklace.",
+    "image": "/imagesss/06_Ruby Embrace Teddy Necklace/01_IMG-20260827-WA0031.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/06_Ruby Embrace Teddy Necklace/01_IMG-20260827-WA0031.jpg",
+      "/imagesss/06_Ruby Embrace Teddy Necklace/02_IMG-20260827-WA0032.jpg",
+      "/imagesss/06_Ruby Embrace Teddy Necklace/03_IMG-20260827-WA0033.jpg",
+      "/imagesss/06_Ruby Embrace Teddy Necklace/04_IMG-20260827-WA0034.jpg"
+    ]
+  },
+  {
+    "id": "crystal-blue-heart-lily-necklace",
+    "name": "Crystal Blue Heart Lily necklace",
+    "category": "necklaces",
+    "price": 799,
+    "description": "Beautiful necklaces crafted with precision. Crystal Blue Heart Lily necklace.",
+    "image": "/imagesss/07_Crystal Blue Heart Lily necklace/01_IMG-20260827-WA0059.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/07_Crystal Blue Heart Lily necklace/01_IMG-20260827-WA0059.jpg",
+      "/imagesss/07_Crystal Blue Heart Lily necklace/02_IMG-20260827-WA0060.jpg",
+      "/imagesss/07_Crystal Blue Heart Lily necklace/03_IMG-20260827-WA0061.jpg",
+      "/imagesss/07_Crystal Blue Heart Lily necklace/04_IMG-20260827-WA0062.jpg"
+    ]
+  },
+  {
+    "id": "tulip-bracelet-pink-colour",
+    "name": "Tulip bracelet pink colour",
+    "category": "bracelets",
+    "price": 299,
+    "description": "Beautiful bracelets crafted with precision. Tulip bracelet pink colour.",
+    "image": "/imagesss/08_Tulip bracelet pink colour/01_IMG-20260827-WA0095.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/08_Tulip bracelet pink colour/01_IMG-20260827-WA0095.jpg",
+      "/imagesss/08_Tulip bracelet pink colour/02_IMG-20260827-WA0096.jpg",
+      "/imagesss/08_Tulip bracelet pink colour/03_IMG-20260827-WA0097.jpg",
+      "/imagesss/08_Tulip bracelet pink colour/04_IMG-20260827-WA0098.jpg"
+    ]
+  },
+  {
+    "id": "tulip-bracelet-multi-colour",
+    "name": "Tulip bracelet multi colour",
+    "category": "bracelets",
+    "price": 299,
+    "description": "Beautiful bracelets crafted with precision. Tulip bracelet multi colour.",
+    "image": "/imagesss/09_Tulip bracelet multi colour/01_IMG-20260827-WA0099.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/09_Tulip bracelet multi colour/01_IMG-20260827-WA0099.jpg",
+      "/imagesss/09_Tulip bracelet multi colour/02_IMG-20260827-WA0100.jpg",
+      "/imagesss/09_Tulip bracelet multi colour/03_IMG-20260827-WA0101.jpg",
+      "/imagesss/09_Tulip bracelet multi colour/04_IMG-20260827-WA0102.jpg"
+    ]
+  },
+  {
+    "id": "tulip-bracelet-white-colour",
+    "name": "Tulip bracelet white colour",
+    "category": "bracelets",
+    "price": 299,
+    "description": "Beautiful bracelets crafted with precision. Tulip bracelet white colour.",
+    "image": "/imagesss/10_Tulip bracelet white colour/01_IMG-20260827-WA0051.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/10_Tulip bracelet white colour/01_IMG-20260827-WA0051.jpg",
+      "/imagesss/10_Tulip bracelet white colour/02_IMG-20260827-WA0052.jpg",
+      "/imagesss/10_Tulip bracelet white colour/03_IMG-20260827-WA0053.jpg",
+      "/imagesss/10_Tulip bracelet white colour/04_IMG-20260827-WA0054.jpg"
+    ]
+  },
+  {
+    "id": "seraphine-bloom-necklace",
+    "name": "Seraphine Bloom necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. Seraphine Bloom necklace.",
+    "image": "/imagesss/11_Seraphine Bloom necklace/01_IMG-20260827-WA0110.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/11_Seraphine Bloom necklace/01_IMG-20260827-WA0110.jpg",
+      "/imagesss/11_Seraphine Bloom necklace/02_IMG-20260827-WA0111.jpg",
+      "/imagesss/11_Seraphine Bloom necklace/03_IMG-20260827-WA0112.jpg",
+      "/imagesss/11_Seraphine Bloom necklace/04_IMG-20260827-WA0113.jpg"
+    ]
+  },
+  {
+    "id": "silver-leaf-free-size-ring",
     "name": "Silver leaf free size ring",
     "category": "rings",
     "price": 199,
-    "description": "Beautiful rings crafted with precision. Silver leaf free size ring 199.",
-    "image": "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-1.jpg",
+    "description": "Beautiful rings crafted with precision. Silver leaf free size ring.",
+    "image": "/imagesss/12_Silver leaf free size ring/01_IMG-20260827-WA0114.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/12_Silver leaf free size ring/01_IMG-20260827-WA0114.jpg",
+      "/imagesss/12_Silver leaf free size ring/02_IMG-20260827-WA0115.jpg",
+      "/imagesss/12_Silver leaf free size ring/03_IMG-20260827-WA0116.jpg",
+      "/imagesss/12_Silver leaf free size ring/04_IMG-20260827-WA0117.jpg"
+    ]
+  },
+  {
+    "id": "whispering-wings",
+    "name": "Whispering wings",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Whispering wings.",
+    "image": "/imagesss/13_Whispering wings/01_IMG-20260827-WA0078.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/13_Whispering wings/01_IMG-20260827-WA0078.jpg",
+      "/imagesss/13_Whispering wings/02_IMG-20260827-WA0079.jpg",
+      "/imagesss/13_Whispering wings/03_IMG-20260827-WA0080.jpg",
+      "/imagesss/13_Whispering wings/04_IMG-20260827-WA0081.jpg"
+    ]
+  },
+  {
+    "id": "the-golden-aurelia-ring",
+    "name": "The Golden Aurelia Ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. The Golden Aurelia Ring.",
+    "image": "/imagesss/14_The Golden Aurelia Ring/01_IMG-20260827-WA0106.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/14_The Golden Aurelia Ring/01_IMG-20260827-WA0106.jpg",
+      "/imagesss/14_The Golden Aurelia Ring/02_IMG-20260827-WA0107.jpg",
+      "/imagesss/14_The Golden Aurelia Ring/03_IMG-20260827-WA0108.jpg",
+      "/imagesss/14_The Golden Aurelia Ring/04_IMG-20260827-WA0109.jpg"
+    ]
+  },
+  {
+    "id": "golden-solitaire-ring",
+    "name": "Golden Solitaire Ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Golden Solitaire Ring.",
+    "image": "/imagesss/15_Golden Solitaire Ring/01_IMG-20260827-WA0043.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/15_Golden Solitaire Ring/01_IMG-20260827-WA0043.jpg",
+      "/imagesss/15_Golden Solitaire Ring/02_IMG-20260827-WA0044.jpg",
+      "/imagesss/15_Golden Solitaire Ring/03_IMG-20260827-WA0045.jpg",
+      "/imagesss/15_Golden Solitaire Ring/04_IMG-20260827-WA0046.jpg"
+    ]
+  },
+  {
+    "id": "golden-ellan-butterfly-ring",
+    "name": "Golden Ellan Butterfly Ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Golden Ellan Butterfly Ring.",
+    "image": "/imagesss/16_Golden Ellan Butterfly Ring/01_IMG-20260827-WA0055.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/16_Golden Ellan Butterfly Ring/01_IMG-20260827-WA0055.jpg",
+      "/imagesss/16_Golden Ellan Butterfly Ring/02_IMG-20260827-WA0056.jpg",
+      "/imagesss/16_Golden Ellan Butterfly Ring/03_IMG-20260827-WA0057.jpg",
+      "/imagesss/16_Golden Ellan Butterfly Ring/04_IMG-20260827-WA0058.jpg"
+    ]
+  },
+  {
+    "id": "golden-heart-ring",
+    "name": "Golden heart ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Golden heart ring.",
+    "image": "/imagesss/17_Golden heart ring/01_IMG-20260827-WA0039.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/17_Golden heart ring/01_IMG-20260827-WA0039.jpg",
+      "/imagesss/17_Golden heart ring/02_IMG-20260827-WA0040.jpg",
+      "/imagesss/17_Golden heart ring/03_IMG-20260827-WA0041.jpg",
+      "/imagesss/17_Golden heart ring/04_IMG-20260827-WA0042.jpg"
+    ]
+  },
+  {
+    "id": "multi-heart-ring",
+    "name": "Multi heart ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. Multi heart ring.",
+    "image": "/imagesss/18_Multi heart ring/01_IMG-20260827-WA0063.jpg",
+    "featured": false,
+    "isNewArrival": true,
+    "images": [
+      "/imagesss/18_Multi heart ring/01_IMG-20260827-WA0063.jpg",
+      "/imagesss/18_Multi heart ring/02_IMG-20260827-WA0064.jpg",
+      "/imagesss/18_Multi heart ring/03_IMG-20260827-WA0065.jpg",
+      "/imagesss/18_Multi heart ring/04_IMG-20260827-WA0066.jpg"
+    ]
+  },
+  {
+    "id": "petal-grace-necklace",
+    "name": "Petal Grace necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. Petal Grace necklace.",
+    "image": "/imagesss/19_Petal Grace necklace/01_IMG-20260827-WA0071.jpg",
     "featured": false,
     "images": [
-      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-1.jpg",
-      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-2.jpg",
-      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-3.jpg",
-      "/img/38-silver-leaf-ring/silver-leaf-free-size-ring-199-4.jpg"
+      "/imagesss/19_Petal Grace necklace/01_IMG-20260827-WA0071.jpg",
+      "/imagesss/19_Petal Grace necklace/02_IMG-20260827-WA0072.jpg",
+      "/imagesss/19_Petal Grace necklace/03_IMG-20260827-WA0073.jpg",
+      "/imagesss/19_Petal Grace necklace/04_IMG-20260827-WA0074.jpg"
+    ]
+  },
+  {
+    "id": "gold-anti-tarnish-heart-necklace",
+    "name": "Gold Anti tarnish heart necklace",
+    "category": "necklaces",
+    "price": 229,
+    "description": "Beautiful necklaces crafted with precision. Gold Anti tarnish heart necklace.",
+    "image": "/imagesss/20_Gold Anti tarnish heart necklace/01_IMG-20260827-WA0047.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/20_Gold Anti tarnish heart necklace/01_IMG-20260827-WA0047.jpg",
+      "/imagesss/20_Gold Anti tarnish heart necklace/02_IMG-20260827-WA0048.jpg",
+      "/imagesss/20_Gold Anti tarnish heart necklace/03_IMG-20260827-WA0049.jpg",
+      "/imagesss/20_Gold Anti tarnish heart necklace/04_IMG-20260827-WA0050.jpg"
+    ]
+  },
+  {
+    "id": "the-aura-monarch-necklace",
+    "name": "The Aura Monarch necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. The Aura Monarch necklace.",
+    "image": "/imagesss/21_The Aura Monarch necklace/01_IMG-20260825-WA0046.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/21_The Aura Monarch necklace/01_IMG-20260825-WA0046.jpg",
+      "/imagesss/21_The Aura Monarch necklace/02_IMG-20260827-WA0075.jpg",
+      "/imagesss/21_The Aura Monarch necklace/03_IMG-20260827-WA0076.jpg",
+      "/imagesss/21_The Aura Monarch necklace/04_IMG-20260827-WA0077.jpg"
+    ]
+  },
+  {
+    "id": "solstice-heart-necklace",
+    "name": "Solstice Heart necklace",
+    "category": "necklaces",
+    "price": 249,
+    "description": "Beautiful necklaces crafted with precision. Solstice Heart necklace.",
+    "image": "/imagesss/22_Solstice Heart necklace/01_IMG-20260827-WA0067.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/22_Solstice Heart necklace/01_IMG-20260827-WA0067.jpg",
+      "/imagesss/22_Solstice Heart necklace/02_IMG-20260827-WA0068.jpg",
+      "/imagesss/22_Solstice Heart necklace/03_IMG-20260827-WA0069.jpg",
+      "/imagesss/22_Solstice Heart necklace/04_IMG-20260827-WA0070.jpg"
+    ]
+  },
+  {
+    "id": "the-astraea-twin-ring",
+    "name": "The Astraea Twin Ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. The Astraea Twin Ring.",
+    "image": "/imagesss/23_The Astraea Twin Ring/01_IMG-20260827-WA0091.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/23_The Astraea Twin Ring/01_IMG-20260827-WA0091.jpg",
+      "/imagesss/23_The Astraea Twin Ring/02_IMG-20260827-WA0092.jpg",
+      "/imagesss/23_The Astraea Twin Ring/03_IMG-20260827-WA0093.jpg",
+      "/imagesss/23_The Astraea Twin Ring/04_IMG-20260827-WA0094.jpg"
+    ]
+  },
+  {
+    "id": "tulip-bracelet-blue-colour",
+    "name": "Tulip bracelet blue colour",
+    "category": "bracelets",
+    "price": 299,
+    "description": "Beautiful bracelets crafted with precision. Tulip bracelet blue colour.",
+    "image": "/imagesss/24_Tulip bracelet blue colour/01_IMG-20260827-WA0082.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/24_Tulip bracelet blue colour/01_IMG-20260827-WA0082.jpg",
+      "/imagesss/24_Tulip bracelet blue colour/02_IMG-20260827-WA0083.jpg",
+      "/imagesss/24_Tulip bracelet blue colour/03_IMG-20260827-WA0084.jpg",
+      "/imagesss/24_Tulip bracelet blue colour/04_IMG-20260827-WA0085.jpg"
+    ]
+  },
+  {
+    "id": "blue-gemstone-floral-gold-bracelet",
+    "name": "Blue Gemstone Floral Gold Bracelet",
+    "category": "bracelets",
+    "price": 299,
+    "description": "Beautiful bracelets crafted with precision. Blue Gemstone Floral Gold Bracelet.",
+    "image": "/imagesss/25_Blue Gemstone Floral Gold Bracelet/01_IMG-20260827-WA0087.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/25_Blue Gemstone Floral Gold Bracelet/01_IMG-20260827-WA0087.jpg",
+      "/imagesss/25_Blue Gemstone Floral Gold Bracelet/02_IMG-20260827-WA0088.jpg",
+      "/imagesss/25_Blue Gemstone Floral Gold Bracelet/03_IMG-20260827-WA0089.jpg",
+      "/imagesss/25_Blue Gemstone Floral Gold Bracelet/04_IMG-20260827-WA0090.jpg"
+    ]
+  },
+  {
+    "id": "the-celeste-pav-band-ring",
+    "name": "The Celeste Pavé Band Ring",
+    "category": "rings",
+    "price": 199,
+    "description": "Beautiful rings crafted with precision. The Celeste Pavé Band Ring.",
+    "image": "/imagesss/26_The Celeste Pavé Band Ring/01_IMG-20260825-WA0120.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/26_The Celeste Pavé Band Ring/01_IMG-20260825-WA0120.jpg",
+      "/imagesss/26_The Celeste Pavé Band Ring/02_IMG-20260827-WA0103.jpg",
+      "/imagesss/26_The Celeste Pavé Band Ring/03_IMG-20260827-WA0104.jpg",
+      "/imagesss/26_The Celeste Pavé Band Ring/04_IMG-20260827-WA0105.jpg"
+    ]
+  },
+  {
+    "id": "celestia-love-bangle",
+    "name": "Celestia Love Bangle",
+    "category": "bangles",
+    "price": 349,
+    "description": "Beautiful bangles crafted with precision. Celestia Love Bangle.",
+    "image": "/imagesss/27_Celestia Love Bangle/01_IMG-20260827-WA0017.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/27_Celestia Love Bangle/01_IMG-20260827-WA0017.jpg",
+      "/imagesss/27_Celestia Love Bangle/02_IMG-20260827-WA0022.jpg",
+      "/imagesss/27_Celestia Love Bangle/03_IMG-20260827-WA0029.jpg",
+      "/imagesss/27_Celestia Love Bangle/04_IMG-20260827-WA0118.jpg"
+    ]
+  },
+  {
+    "id": "grace-bow-bracelet",
+    "name": "Grace Bow Bracelet",
+    "category": "bracelets",
+    "price": 349,
+    "description": "Beautiful bracelets crafted with precision. Grace Bow Bracelet.",
+    "image": "/imagesss/28_Grace Bow Bracelet/01_IMG-20260827-WA0016.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/28_Grace Bow Bracelet/01_IMG-20260827-WA0016.jpg",
+      "/imagesss/28_Grace Bow Bracelet/02_IMG-20260827-WA0018.jpg",
+      "/imagesss/28_Grace Bow Bracelet/03_IMG-20260827-WA0024.jpg",
+      "/imagesss/28_Grace Bow Bracelet/04_IMG-20260827-WA0119.jpg"
+    ]
+  },
+  {
+    "id": "elysian-petals-bracelet",
+    "name": "Elysian Petals bracelet",
+    "category": "bracelets",
+    "price": 349,
+    "description": "Beautiful bracelets crafted with precision. Elysian Petals bracelet.",
+    "image": "/imagesss/29_Elysian Petals bracelet/01_IMG-20260827-WA0021.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/29_Elysian Petals bracelet/01_IMG-20260827-WA0021.jpg",
+      "/imagesss/29_Elysian Petals bracelet/02_IMG-20260827-WA0023.jpg",
+      "/imagesss/29_Elysian Petals bracelet/03_IMG-20260827-WA0025.jpg",
+      "/imagesss/29_Elysian Petals bracelet/04_IMG-20260827-WA0120.jpg"
+    ]
+  },
+  {
+    "id": "aurelia-halo-bracelet",
+    "name": "Aurelia Halo Bracelet",
+    "category": "bracelets",
+    "price": 349,
+    "description": "Beautiful bracelets crafted with precision. Aurelia Halo Bracelet.",
+    "image": "/imagesss/30_Aurelia Halo Bracelet/01_IMG-20260827-WA0026.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/30_Aurelia Halo Bracelet/01_IMG-20260827-WA0026.jpg",
+      "/imagesss/30_Aurelia Halo Bracelet/02_IMG-20260827-WA0028.jpg",
+      "/imagesss/30_Aurelia Halo Bracelet/03_IMG-20260827-WA0030.jpg",
+      "/imagesss/30_Aurelia Halo Bracelet/04_IMG-20260827-WA0121.jpg"
+    ]
+  },
+  {
+    "id": "infinity-grace-bracelet",
+    "name": "Infinity Grace bracelet",
+    "category": "bracelets",
+    "price": 349,
+    "description": "Beautiful bracelets crafted with precision. Infinity Grace bracelet.",
+    "image": "/imagesss/31_Infinity Grace bracelet/01_IMG-20260827-WA0019.jpg",
+    "featured": false,
+    "images": [
+      "/imagesss/31_Infinity Grace bracelet/01_IMG-20260827-WA0019.jpg",
+      "/imagesss/31_Infinity Grace bracelet/02_IMG-20260827-WA0020.jpg",
+      "/imagesss/31_Infinity Grace bracelet/03_IMG-20260827-WA0027.jpg",
+      "/imagesss/31_Infinity Grace bracelet/04_IMG-20260827-WA0122.jpg"
     ]
   }
 ];

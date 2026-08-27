@@ -89,11 +89,6 @@ const ProductDetails = () => {
             <p style={{ fontSize: '1.5rem', fontFamily: 'var(--font-sans)', fontWeight: '500' }}>
               ₹{product.price?.toLocaleString()}
             </p>
-            {product.originalPrice && (
-              <p style={{ fontSize: '1.2rem', textDecoration: 'line-through', color: 'var(--color-gray-dark)' }}>
-                MRP ₹{product.originalPrice?.toLocaleString()}
-              </p>
-            )}
           </div>
           <p style={{ fontSize: '0.9rem', color: 'var(--color-gray-dark)', marginBottom: '1.5rem' }}>
             Inclusive of all taxes

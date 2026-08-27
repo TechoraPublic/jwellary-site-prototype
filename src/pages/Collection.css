@@ -87,10 +87,17 @@
 
 .mobile-categories {
   display: flex;
+  align-items: center;
   gap: 0.75rem;
   overflow-x: auto;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.mobile-categories::-webkit-scrollbar {
+  display: none;
 }
 
 .mobile-categories button {

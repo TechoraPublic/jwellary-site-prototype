@@ -49,14 +49,14 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/img/blue_bell/logo.png" alt="Blue Bells Jewellery" />
+          <img src="/imagesss/logo.png" alt="Blue Bells Jewellery" />
         </Link>
 
         {/* Navigation Menu */}
         <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <li className="mobile-only-logo">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-              <img src="/img/blue_bell/logo.png" alt="Blue Bells Jewellery" />
+              <img src="/imagesss/logo.png" alt="Blue Bells Jewellery" />
             </Link>
           </li>
           <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>

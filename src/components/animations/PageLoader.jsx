@@ -82,7 +82,7 @@ const PageLoader = ({ onComplete }) => {
     >
       <img
         ref={logoRef}
-        src="/img/blue_bell/logo.png"
+        src="/imagesss/logo.png"
         alt="Blue Bells Jewellery"
         style={{ height: '80px', marginBottom: '2rem', willChange: 'transform, opacity' }}
       />

@@ -59,7 +59,7 @@ const Home = () => {
             </Link>
           </ScrollReveal>
           <div>
-            <ImageReveal src="img/08-gold-delicate-band-ring/golden-solitaire-ring-free-size-1.jpg" alt="Craftsmanship" style={{ maxHeight: '500px' }} delay={0.2} />
+            <ImageReveal src="/imagesss/23_The Astraea Twin Ring/01_IMG-20260827-WA0091.jpg" alt="Craftsmanship" style={{ maxHeight: '500px' }} delay={0.2} />
           </div>
         </div>
       </section>

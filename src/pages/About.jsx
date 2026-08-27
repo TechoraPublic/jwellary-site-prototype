@@ -24,7 +24,7 @@ const About = () => {
       {/* Story Image */}
       <div style={{ width: '100%', marginBottom: '6rem' }}>
         <img
-          src="img/Our_story.png"
+          src="/imagesss/our_story.png"
           alt="Our_story"
           style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '4px' }}
         />
@@ -45,7 +45,7 @@ const About = () => {
           </p>
         </ScrollReveal>
         <div style={{ aspectRatio: '1/1' }}>
-          <ImageReveal src="img/34-gold-round-pendant-necklace/gold-round-pendant-necklace-1.jpg" alt="Vintage sketch" delay={0.2} />
+          <ImageReveal src="/imagesss/01_Golden bow necklace/01_IMG-20260827-WA0008.jpg" alt="Vintage sketch" delay={0.2} />
         </div>
       </div>
 
