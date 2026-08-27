@@ -14,7 +14,7 @@ const About = () => {
       {/* Header */}
       <ScrollReveal className="container text-center" style={{ marginBottom: '4rem' }} delay={0.2}>
         <p style={{ color: 'var(--color-gold)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.85rem', marginBottom: '1.5rem', fontWeight: '500', fontFamily: 'var(--font-sans)' }}>Our Heritage</p>
-        <h1 style={{ marginBottom: '1rem', color: 'var(--color-navy)' }}>The Blue Bell Story</h1>
+        <h1 style={{ marginBottom: '1rem', color: 'var(--color-navy)' }}>The Blue Bells Story</h1>
         <GoldDivider delay={0.4} />
         <p style={{ color: 'var(--color-navy-light)', maxWidth: '700px', margin: '0 auto', fontSize: '1.1rem' }}>
           A legacy of exceptional craftsmanship and visionary design.

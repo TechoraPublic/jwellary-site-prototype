@@ -83,7 +83,7 @@ const PageLoader = ({ onComplete }) => {
       <img
         ref={logoRef}
         src="/img/blue_bell/logo.png"
-        alt="Blue Bell Jewellery"
+        alt="Blue Bells Jewellery"
         style={{ height: '80px', marginBottom: '2rem', willChange: 'transform, opacity' }}
       />
       <div

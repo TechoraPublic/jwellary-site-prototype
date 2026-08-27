@@ -12,6 +12,13 @@
   overflow: hidden;
 }
 
+.product-image-wrapper .image-zoom-container,
+.product-image-wrapper .image-zoom-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .product-image-wrapper img {
   width: 100%;
   height: 100%;

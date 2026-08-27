@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Trash2, Plus, Minus } from 'lucide-react';
 import { ShopContext } from '../context/ShopContext';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity } = useContext(ShopContext);
+  const [itemToDelete, setItemToDelete] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -44,7 +45,7 @@ const Cart = () => {
                 <button onClick={() => updateQuantity(item.id, 1)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none' }}><Plus size={16} /></button>
               </div>
               
-              <button onClick={() => removeFromCart(item.id)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none', color: '#ff4d4f' }} aria-label="Remove item">
+              <button onClick={() => setItemToDelete(item.id)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none', color: '#ff4d4f' }} aria-label="Remove item">
                 <Trash2 size={20} />
               </button>
             </div>
@@ -68,6 +69,54 @@ const Cart = () => {
           <button className="btn btn-primary" style={{ width: '100%' }}>Proceed to Checkout</button>
         </div>
       </div>
+
+      {/* Delete Confirmation Modal */}
+      {itemToDelete && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(3, 22, 55, 0.7)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 1000
+        }}>
+          <div style={{
+            backgroundColor: 'var(--color-ivory)',
+            padding: '2rem',
+            borderRadius: '4px',
+            textAlign: 'center',
+            maxWidth: '400px',
+            width: '90%',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+          }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--color-navy)', fontFamily: 'var(--font-serif)', fontSize: '1.5rem' }}>Remove Item</h3>
+            <p style={{ marginBottom: '2rem', color: 'var(--color-navy-light)' }}>Are you sure you want to remove this item from your cart?</p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+              <button 
+                onClick={() => setItemToDelete(null)}
+                className="btn btn-outline"
+                style={{ flex: 1 }}
+              >
+                No
+              </button>
+              <button 
+                onClick={() => {
+                  removeFromCart(itemToDelete);
+                  setItemToDelete(null);
+                }}
+                className="btn btn-primary"
+                style={{ flex: 1, backgroundColor: '#ff4d4f', borderColor: '#ff4d4f' }}
+              >
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

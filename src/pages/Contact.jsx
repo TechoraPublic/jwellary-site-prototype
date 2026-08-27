@@ -15,7 +15,7 @@ const Contact = () => {
       <div style={{ backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', paddingTop: '160px', paddingBottom: '100px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <ScrollReveal className="container" style={{ position: 'relative', zIndex: 2 }}>
           <p style={{ color: 'var(--color-gold)', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.85rem', marginBottom: '1.5rem', fontWeight: '500', fontFamily: 'var(--font-sans)' }}>
-            Contact Blue Bell
+            Contact Blue Bells
           </p>
           <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
             Let's Create Something Timeless

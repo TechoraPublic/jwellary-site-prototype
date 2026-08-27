@@ -23,8 +23,20 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${isScrolled || location.pathname !== '/' ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
 
         {/* Mobile Menu Toggle */}
@@ -32,19 +44,19 @@ const Navbar = () => {
           className="mobile-toggle"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
         </button>
 
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/img/blue_bell/logo.png" alt="Blue Bell Jewellery" />
+          <img src="/img/blue_bell/logo.png" alt="Blue Bells Jewellery" />
         </Link>
 
         {/* Navigation Menu */}
         <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <li className="mobile-only-logo">
             <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-              <img src="/img/blue_bell/logo.png" alt="Blue Bell Jewellery" />
+              <img src="/img/blue_bell/logo.png" alt="Blue Bells Jewellery" />
             </Link>
           </li>
           <li><Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
@@ -57,15 +69,15 @@ const Navbar = () => {
         {/* Actions */}
         <div className="nav-actions">
           <Link to="/wishlist" className="cart-btn" style={{ marginRight: '1rem' }} aria-label="Wishlist">
-            <Heart size={20} />
+            <Heart size={20} strokeWidth={1.5} />
             <span className="cart-count">{wishlistItems.length}</span>
           </Link>
           <Link to="/cart" className="cart-btn" style={{ marginRight: '1rem' }} aria-label="Cart">
-            <ShoppingBag size={20} />
+            <ShoppingBag size={20} strokeWidth={1.5} />
             <span className="cart-count">{cartItems.reduce((acc, item) => acc + item.quantity, 0)}</span>
           </Link>
           <Link to="/login" className="cart-btn" aria-label="My Profile">
-            <User size={20} />
+            <User size={20} strokeWidth={1.5} />
           </Link>
         </div>
       </div>

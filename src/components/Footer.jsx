@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
-            <span className="logo-text">BLUE BELL</span>
+            <span className="logo-text">Blue Bells</span>
           </Link>
           <p className="footer-desc">Crafting timeless elegance and modern luxury since 1995.</p>
           <div className="social-links">
