@@ -32,22 +32,24 @@ const Cart = () => {
       <div className="responsive-cart-grid">
         <div>
           {cartItems.map((item) => (
-            <div key={item.id} style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', paddingBottom: '1.5rem', marginBottom: '1.5rem', borderBottom: '1px solid rgba(217, 164, 65, 0.3)' }}>
-              <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
-              <div style={{ flex: 1 }}>
+            <div key={item.id} className="cart-item-row">
+              <img src={item.image} alt={item.name} className="cart-item-image" style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+              <div className="cart-item-details" style={{ flex: 1 }}>
                 <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--color-navy)', fontFamily: 'var(--font-serif)' }}>{item.name}</h3>
                 <p style={{ color: 'var(--color-gold)', fontWeight: 'bold' }}>₹{item.price.toFixed(2)}</p>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', border: '1px solid rgba(3, 22, 55, 0.2)', borderRadius: '2px' }}>
-                <button onClick={() => updateQuantity(item.id, -1)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none' }}><Minus size={16} /></button>
-                <span style={{ padding: '0 1rem' }}>{item.quantity}</span>
-                <button onClick={() => updateQuantity(item.id, 1)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none' }}><Plus size={16} /></button>
+              <div className="cart-item-actions">
+                <div style={{ display: 'flex', alignItems: 'center', border: '1px solid rgba(3, 22, 55, 0.2)', borderRadius: '2px' }}>
+                  <button onClick={() => updateQuantity(item.id, -1)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none' }}><Minus size={16} /></button>
+                  <span style={{ padding: '0 1rem' }}>{item.quantity}</span>
+                  <button onClick={() => updateQuantity(item.id, 1)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none' }}><Plus size={16} /></button>
+                </div>
+                
+                <button onClick={() => setItemToDelete(item.id)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none', color: '#ff4d4f' }} aria-label="Remove item">
+                  <Trash2 size={20} />
+                </button>
               </div>
-              
-              <button onClick={() => setItemToDelete(item.id)} style={{ padding: '0.5rem', cursor: 'pointer', background: 'transparent', border: 'none', color: '#ff4d4f' }} aria-label="Remove item">
-                <Trash2 size={20} />
-              </button>
             </div>
           ))}
         </div>
@@ -117,6 +119,36 @@ const Cart = () => {
           </div>
         </div>
       )}
+      <style>{`
+        .cart-item-row {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          padding-bottom: 1.5rem;
+          margin-bottom: 1.5rem;
+          border-bottom: 1px solid rgba(217, 164, 65, 0.3);
+        }
+        @media (max-width: 600px) {
+          .cart-item-row {
+            flex-wrap: wrap;
+            gap: 1rem;
+          }
+          .cart-item-image {
+            width: 80px !important;
+            height: 80px !important;
+          }
+          .cart-item-details {
+            min-width: 150px;
+          }
+          .cart-item-actions {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 };

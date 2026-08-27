@@ -27,7 +27,7 @@ export const products = [
     "images": [
       "/imagesss/02_Purple swan necklace/01_IMG-20260827-WA0004.jpg",
       "/imagesss/02_Purple swan necklace/02_IMG-20260827-WA0005.jpg",
-      "/imagesss/02_Purple swan n`ecklace/03_IMG-20260827-WA0006.jpg",
+      "/imagesss/02_Purple swan necklace/03_IMG-20260827-WA0006.jpg",
       "/imagesss/02_Purple swan necklace/04_IMG-20260827-WA0007.jpg"
     ]
   },

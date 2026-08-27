@@ -82,11 +82,13 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section {
-  padding: 6rem 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 /* Animations */
@@ -204,7 +206,10 @@ h3 { font-size: 1.75rem; }
 @media (max-width: 768px) {
   .grid-cols-3, .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-cols-2 { grid-template-columns: 1fr; }
-  .section { padding: 4rem 0; }
+  .section { 
+    padding-top: 4rem; 
+    padding-bottom: 4rem; 
+  }
   
   .responsive-split { grid-template-columns: 1fr; }
   
@@ -215,7 +220,10 @@ h3 { font-size: 1.75rem; }
 
 @media (max-width: 480px) {
   .grid-cols-2 { grid-template-columns: 1fr; }
-  .section { padding: 3rem 0; }
+  .section { 
+    padding-top: 3rem; 
+    padding-bottom: 3rem; 
+  }
   
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }

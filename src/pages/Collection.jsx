@@ -15,6 +15,8 @@ const Collection = () => {
   const [sortOption, setSortOption] = useState('Featured');
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   
+  const [visibleCount, setVisibleCount] = useState(12);
+  
   const categories = ['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings'];
 
   useEffect(() => {
@@ -46,6 +48,7 @@ const Collection = () => {
     }
 
     setProducts(filtered);
+    setVisibleCount(12);
   }, [searchQuery, activeCategory, sortOption, categoryId]);
 
   // Update active category if URL params change
@@ -218,11 +221,23 @@ const Collection = () => {
       </div>
 
       <div style={{ marginBottom: '2rem', color: 'var(--color-gray-dark)', fontSize: '0.95rem' }}>
-        Showing <strong>{products.length}</strong> of <strong>{allProducts.length}</strong> products
+        Showing <strong>{Math.min(visibleCount, products.length)}</strong> of <strong>{products.length}</strong> products
       </div>
 
       {products.length > 0 ? (
-        <ProductGrid products={products} columns={4} />
+        <>
+          <ProductGrid products={products.slice(0, visibleCount)} columns={4} />
+          {visibleCount < products.length && (
+            <div className="text-center" style={{ marginTop: '3.5rem' }}>
+              <button 
+                className="btn btn-primary" 
+                onClick={() => setVisibleCount(prev => prev + 12)}
+              >
+                View More Collection
+              </button>
+            </div>
+          )}
+        </>
       ) : (
         <div className="text-center" style={{ padding: '4rem 0' }}>
           <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>No products found matching your criteria.</p>

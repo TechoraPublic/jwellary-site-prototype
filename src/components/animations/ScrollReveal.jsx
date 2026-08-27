@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ScrollReveal = ({ children, delay = 0, y = 40, duration = 0.8, className = '' }) => {
+const ScrollReveal = ({ children, delay = 0, y = 40, duration = 0.8, className = '', style = {} }) => {
   const elementRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const ScrollReveal = ({ children, delay = 0, y = 40, duration = 0.8, className =
   }, [delay, y, duration]);
 
   return (
-    <div ref={elementRef} className={className} style={{ willChange: 'opacity, transform' }}>
+    <div ref={elementRef} className={className} style={{ willChange: 'opacity, transform', ...style }}>
       {children}
     </div>
   );
