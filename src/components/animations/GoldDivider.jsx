@@ -9,14 +9,14 @@ const GoldDivider = ({ width = '40px', style = {}, delay = 0 }) => {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+
     if (prefersReducedMotion) {
       gsap.set(lineRef.current, { scaleX: 1 });
       return;
     }
 
     const line = lineRef.current;
-    
+
     gsap.set(line, { scaleX: 0, transformOrigin: 'center' });
 
     const ctx = gsap.context(() => {
@@ -39,16 +39,16 @@ const GoldDivider = ({ width = '40px', style = {}, delay = 0 }) => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', ...style }}>
-      <div 
+      <div
         ref={lineRef}
-        className="gold-divider" 
-        style={{ 
-          height: '1px', 
-          width: width, 
-          backgroundColor: 'var(--color-gold)', 
+        className="gold-divider"
+        style={{
+          height: '1px',
+          width: width,
+          backgroundColor: 'var(--color-gold)',
           margin: 0,
           willChange: 'transform'
-        }} 
+        }}
       />
     </div>
   );
