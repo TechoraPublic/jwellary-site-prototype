@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
-import ScrollReveal from '../components/animations/ScrollReveal';
-import GoldDivider from '../components/animations/GoldDivider';
+import ScrollReveal from '../../components/animations/ScrollReveal';
+import GoldDivider from '../../components/animations/GoldDivider';
 
 const Contact = () => {
   useEffect(() => {

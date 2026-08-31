@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Hero from '../components/Hero';
-import ProductGrid from '../components/ProductGrid';
-import { products as allProducts } from '../data/products';
+import Hero from '../../components/home/Hero';
+import ProductGrid from '../../components/product/ProductGrid';
+import { products as allProducts } from '../../data/products';
 import { Link } from 'react-router-dom';
-import ScrollReveal from '../components/animations/ScrollReveal';
-import ImageReveal from '../components/animations/ImageReveal';
-import GoldDivider from '../components/animations/GoldDivider';
+import ScrollReveal from '../../components/animations/ScrollReveal';
+import ImageReveal from '../../components/animations/ImageReveal';
+import GoldDivider from '../../components/animations/GoldDivider';
 
 const Home = () => {
   const [visibleCount, setVisibleCount] = useState(8);

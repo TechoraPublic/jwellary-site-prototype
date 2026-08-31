@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trash2, ShoppingBag } from 'lucide-react';
-import { ShopContext } from '../context/ShopContext';
+import { ShopContext } from '../../context/ShopContext';
 
 const Wishlist = () => {
   const { wishlistItems, removeFromWishlist, addToCart } = useContext(ShopContext);

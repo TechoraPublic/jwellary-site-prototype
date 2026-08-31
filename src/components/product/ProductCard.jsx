@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, ShoppingBag } from 'lucide-react';
-import { ShopContext } from '../context/ShopContext';
+import { ShopContext } from '../../context/ShopContext';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {

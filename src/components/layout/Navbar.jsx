@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingBag, Heart, Menu, X, User } from 'lucide-react';
-import { ShopContext } from '../context/ShopContext';
+import { ShopContext } from '../../context/ShopContext';
+import { AuthContext } from '../../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,6 +10,8 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { cartItems, wishlistItems } = React.useContext(ShopContext);
+  const { user, logout } = React.useContext(AuthContext);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,9 +79,22 @@ const Navbar = () => {
             <ShoppingBag size={20} strokeWidth={1.5} />
             <span className="cart-count">{cartItems.reduce((acc, item) => acc + item.quantity, 0)}</span>
           </Link>
-          <Link to="/login" className="cart-btn" aria-label="My Profile">
-            <User size={20} strokeWidth={1.5} />
-          </Link>
+          {user ? (
+            <div className="user-dropdown-container">
+              <div className="user-avatar" onClick={() => setDropdownOpen(!dropdownOpen)}>
+                {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
+              </div>
+              {dropdownOpen && (
+                <div className="user-dropdown-menu">
+                  <button onClick={() => { logout(); setDropdownOpen(false); }} className="logout-btn">Logout</button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link to="/login" className="cart-btn" aria-label="My Profile">
+              <User size={20} strokeWidth={1.5} />
+            </Link>
+          )}
         </div>
       </div>
     </nav>

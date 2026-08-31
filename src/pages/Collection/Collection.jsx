@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
-import ProductGrid from '../components/ProductGrid';
-import { products as allProducts } from '../data/products';
+import ProductGrid from '../../components/product/ProductGrid';
+import { products as allProducts } from '../../data/products';
 import { SlidersHorizontal, X } from 'lucide-react';
 import './Collection.css';
 

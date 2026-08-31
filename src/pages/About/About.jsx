@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import ScrollReveal from '../components/animations/ScrollReveal';
-import ImageReveal from '../components/animations/ImageReveal';
-import GoldDivider from '../components/animations/GoldDivider';
+import ScrollReveal from '../../components/animations/ScrollReveal';
+import ImageReveal from '../../components/animations/ImageReveal';
+import GoldDivider from '../../components/animations/GoldDivider';
 
 const About = () => {
   useEffect(() => {

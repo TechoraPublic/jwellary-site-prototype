@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
-import ProductGrid from '../components/ProductGrid';
-import { products as allProducts } from '../data/products';
-import ScrollReveal from '../components/animations/ScrollReveal';
-import GoldDivider from '../components/animations/GoldDivider';
-import './Collection.css'; // Import the same CSS for mobile filters
+import ProductGrid from '../../components/product/ProductGrid';
+import { products as allProducts } from '../../data/products';
+import ScrollReveal from '../../components/animations/ScrollReveal';
+import GoldDivider from '../../components/animations/GoldDivider';
+import "../Collection/Collection.css"; // Import the same CSS for mobile filters
 
 const NewArrivals = () => {
   const [products, setProducts] = useState([]);

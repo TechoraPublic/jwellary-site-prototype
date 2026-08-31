@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import { getProductById } from '../data/products';
-import { ShopContext } from '../context/ShopContext';
+import { getProductById } from '../../data/products';
+import { ShopContext } from '../../context/ShopContext';
 
 const ProductDetails = () => {
   const { productId } = useParams();
