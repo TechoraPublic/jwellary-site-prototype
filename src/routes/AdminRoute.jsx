@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-// import { useAuth } from '../hooks/useAuth';
+import { AuthContext } from '../context/AuthContext';
 
 const AdminRoute = () => {
-  // const { user, loading } = useAuth();
+  const { user, loading } = useContext(AuthContext);
   
-  // if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
   
-  // if (!user || user.role !== 'admin') {
-  //   return <Navigate to="/" replace />;
-  // }
+  if (!user || user.role !== 'admin') {
+    return <Navigate to="/" replace />;
+  }
   
   return <Outlet />;
 };
