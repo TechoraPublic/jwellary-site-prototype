@@ -29,7 +29,11 @@ const Login = () => {
       const data = await login(formData);
       if (data.success) {
         setTimeout(() => {
-          navigate('/'); // Redirect to home on success
+          if (data.data && data.data.role === 'admin') {
+            navigate('/admin');
+          } else {
+            navigate('/'); // Redirect to home on success
+          }
         }, 500);
       }
     } catch (err) {

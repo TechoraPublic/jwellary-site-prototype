@@ -1,9 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
 import ScrollReveal from '../../components/animations/ScrollReveal';
 import GoldDivider from '../../components/animations/GoldDivider';
+import { toast } from 'react-toastify';
+import { contactService } from '../../services/contact.service';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    mobile: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const res = await contactService.submitForm(formData);
+      if (res.success) {
+        toast.success(res.message || 'Message sent successfully!');
+        setFormData({ fullName: '', email: '', mobile: '', subject: '', message: '' });
+      }
+    } catch (error) {
+      toast.error(error.message || 'Failed to send message.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -105,19 +135,19 @@ const Contact = () => {
               </div>
             </div>
 
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form onSubmit={handleSubmit}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
                 <div>
                   <label htmlFor="fullName" style={{ display: 'block', fontSize: '0.75rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem', color: 'var(--color-navy)' }}>
                     Full Name <span style={{ color: 'var(--color-gold)' }}>*</span>
                   </label>
-                  <input type="text" id="fullName" placeholder="Your name" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required />
+                  <input type="text" id="fullName" value={formData.fullName} onChange={handleChange} placeholder="Your name" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required />
                 </div>
                 <div>
                   <label htmlFor="email" style={{ display: 'block', fontSize: '0.75rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem', color: 'var(--color-navy)' }}>
                     Email Address <span style={{ color: 'var(--color-gold)' }}>*</span>
                   </label>
-                  <input type="email" id="email" placeholder="you@example.com" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required />
+                  <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required />
                 </div>
               </div>
 
@@ -125,14 +155,14 @@ const Contact = () => {
                 <label htmlFor="mobile" style={{ display: 'block', fontSize: '0.75rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem', color: 'var(--color-navy)' }}>
                   Mobile Number
                 </label>
-                <input type="tel" id="mobile" placeholder="10-digit mobile (optional)" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} />
+                <input type="tel" id="mobile" value={formData.mobile} onChange={handleChange} placeholder="10-digit mobile (optional)" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} />
               </div>
 
               <div style={{ marginBottom: '2rem' }}>
                 <label htmlFor="subject" style={{ display: 'block', fontSize: '0.75rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem', color: 'var(--color-navy)' }}>
                   Subject <span style={{ color: 'var(--color-gold)' }}>*</span>
                 </label>
-                <select id="subject" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', appearance: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)', backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23031637%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem top 50%', backgroundSize: '0.65rem auto' }} required>
+                <select id="subject" value={formData.subject} onChange={handleChange} style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', appearance: 'none', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)', backgroundImage: 'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23031637%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")', backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem top 50%', backgroundSize: '0.65rem auto' }} required>
                   <option value="">Select a subject</option>
                   <option value="Product Inquiry">Product Inquiry</option>
                   <option value="Order Issue">Order Issue</option>
@@ -146,13 +176,13 @@ const Contact = () => {
                 <label htmlFor="message" style={{ display: 'block', fontSize: '0.75rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.75rem', color: 'var(--color-navy)' }}>
                   Message <span style={{ color: 'var(--color-gold)' }}>*</span>
                 </label>
-                <textarea id="message" rows="6" placeholder="How can we help you?" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', resize: 'vertical', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required></textarea>
+                <textarea id="message" value={formData.message} onChange={handleChange} rows="6" placeholder="How can we help you?" style={{ width: '100%', padding: '1rem', border: '1px solid rgba(3,22,55,0.20)', borderRadius: '2px', outline: 'none', resize: 'vertical', backgroundColor: 'transparent', fontFamily: 'var(--font-sans)' }} required></textarea>
               </div>
 
-              <button type="submit" className="btn" style={{ width: '100%', padding: '1.25rem', backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', border: '1px solid var(--color-gold)', borderRadius: '2px', fontSize: '0.85rem', letterSpacing: '2px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', transition: 'all 0.4s ease' }}
-                onMouseOver={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-gold)'; e.currentTarget.style.color = 'var(--color-navy)'; }}
-                onMouseOut={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-navy)'; e.currentTarget.style.color = 'var(--color-ivory)'; }}>
-                Send Message <Send size={16} />
+              <button type="submit" disabled={isSubmitting} className="btn" style={{ width: '100%', padding: '1.25rem', backgroundColor: 'var(--color-navy)', color: 'var(--color-ivory)', border: '1px solid var(--color-gold)', borderRadius: '2px', fontSize: '0.85rem', letterSpacing: '2px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.75rem', transition: 'all 0.4s ease', opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}
+                onMouseOver={(e) => { if(!isSubmitting) { e.currentTarget.style.backgroundColor = 'var(--color-gold)'; e.currentTarget.style.color = 'var(--color-navy)'; } }}
+                onMouseOut={(e) => { if(!isSubmitting) { e.currentTarget.style.backgroundColor = 'var(--color-navy)'; e.currentTarget.style.color = 'var(--color-ivory)'; } }}>
+                {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'} {!isSubmitting && <Send size={16} />}
               </button>
             </form>
           </ScrollReveal>

@@ -18,11 +18,26 @@ import Wishlist from '../pages/Wishlist/Wishlist';
 import Contact from '../pages/Contact/Contact';
 import Login from '../pages/Auth/Login';
 import Signup from '../pages/Auth/Signup';
+import Profile from '../pages/Profile/Profile';
 // import NotFound from '../pages/NotFound/NotFound';
 
 // Admin Pages
+import Dashboard from '../admin/pages/Dashboard/Dashboard';
 import AddCategory from '../admin/pages/Category/AddCategory';
+import EditCategory from '../admin/pages/Category/EditCategory';
+import ManageCategories from '../admin/pages/Category/ManageCategories';
 import AddProduct from '../admin/pages/Product/AddProduct';
+import EditProduct from '../admin/pages/Product/EditProduct';
+import ManageProducts from '../admin/pages/Product/ManageProducts';
+import ManageCollections from '../admin/pages/Collection/ManageCollections';
+import AddCollection from '../admin/pages/Collection/AddCollection';
+import EditCollection from '../admin/pages/Collection/EditCollection';
+import ManageInventory from '../admin/pages/Inventory/ManageInventory';
+import ManageOrders from '../admin/pages/Order/ManageOrders';
+import OrderDetails from '../admin/pages/Order/OrderDetails';
+import ManageCustomers from '../admin/pages/Customer/ManageCustomers';
+import HomepageSettings from '../admin/pages/Content/HomepageSettings';
+import AdminNewArrivals from '../admin/pages/Content/NewArrivals';
 
 const AppRoutes = () => {
   return (
@@ -38,6 +53,7 @@ const AppRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
 
       {/* Auth Routes */}
@@ -49,10 +65,23 @@ const AppRoutes = () => {
       {/* Admin Routes */}
       <Route element={<AdminRoute />}>
         <Route element={<AdminLayout />}>
-          {/* You can add an admin dashboard component here for index route later */}
-          <Route path="/admin" element={<div style={{padding: '30px', fontSize: '1.2rem', color: '#555'}}>Select an action from the sidebar.</div>} />
+          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/admin/categories/manage" element={<ManageCategories />} />
           <Route path="/admin/categories/add" element={<AddCategory />} />
+          <Route path="/admin/categories/edit/:id" element={<EditCategory />} />
+
+          <Route path="/admin/products/manage" element={<ManageProducts />} />
+          <Route path="/admin/collections/manage" element={<ManageCollections />} />
+          <Route path="/admin/collections/add" element={<AddCollection />} />
+          <Route path="/admin/collections/edit/:id" element={<EditCollection />} />
+          <Route path="/admin/inventory/manage" element={<ManageInventory />} />
+          <Route path="/admin/orders/manage" element={<ManageOrders />} />
+          <Route path="/admin/orders/:id" element={<OrderDetails />} />
+          <Route path="/admin/customers/manage" element={<ManageCustomers />} />
+          <Route path="/admin/content/homepage" element={<HomepageSettings />} />
+          <Route path="/admin/content/new-arrivals" element={<AdminNewArrivals />} />
           <Route path="/admin/products/add" element={<AddProduct />} />
+          <Route path="/admin/products/edit/:id" element={<EditProduct />} />
         </Route>
       </Route>
 

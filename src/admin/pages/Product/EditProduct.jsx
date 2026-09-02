@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { categoryService } from '../../../services/category.service';
 import { productService } from '../../../services/product.service';
 
-const AddProduct = () => {
+const EditProduct = () => {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
@@ -17,22 +20,45 @@ const AddProduct = () => {
     isNewArrival: false
   });
   const [imageFiles, setImageFiles] = useState([]);
+  const [existingImages, setExistingImages] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [fetching, setFetching] = useState(true);
 
-  // Fetch categories on mount to populate the dropdown
   useEffect(() => {
-    const fetchCategories = async () => {
+    const fetchData = async () => {
       try {
-        const response = await categoryService.getAllCategories();
-        if (response.success && response.data) {
-          setCategories(response.data);
+        // Fetch categories for dropdown
+        const catRes = await categoryService.getAllCategories();
+        if (catRes.success && catRes.data) {
+          setCategories(catRes.data);
+        }
+
+        // Fetch product details
+        const prodRes = await productService.getProductById(id);
+        if (prodRes.success && prodRes.data) {
+          const p = prodRes.data;
+          setFormData({
+            name: p.name || '',
+            sku: p.sku || '',
+            description: p.description || '',
+            price: p.price || '',
+            category: p.category?._id || p.category || '',
+            stock: p.stock || 0,
+            lowStockThreshold: p.lowStockThreshold || 5,
+            material: p.material || '',
+            isNewArrival: p.isNewArrival || false
+          });
+          setExistingImages(p.images || []);
         }
       } catch (error) {
-        toast.error('Failed to load categories for dropdown');
+        toast.error('Failed to load product details');
+        navigate('/admin/products/manage');
+      } finally {
+        setFetching(false);
       }
     };
-    fetchCategories();
-  }, []);
+    fetchData();
+  }, [id, navigate]);
 
   const handleChange = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -56,7 +82,6 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Basic validation
     if (!formData.name || !formData.price || !formData.category) {
       toast.error('Please fill in all required fields');
       return;
@@ -70,7 +95,6 @@ const AddProduct = () => {
     try {
       setLoading(true);
       
-      // Use FormData because we're uploading an image file
       const submitData = new FormData();
       submitData.append('name', formData.name);
       submitData.append('sku', formData.sku);
@@ -88,28 +112,23 @@ const AddProduct = () => {
         });
       }
 
-      await productService.createProduct(submitData);
-      toast.success('Product created successfully!');
-      
-      // Reset form
-      setFormData({ 
-        name: '', sku: '', description: '', price: '', category: '', 
-        stock: 0, lowStockThreshold: 5, material: '', isNewArrival: false 
-      });
-      setImageFiles([]);
-      // Reset file input UI manually if needed, but simple re-render clears states.
-      document.getElementById('images').value = '';
-
+      await productService.updateProduct(id, submitData);
+      toast.success('Product updated successfully!');
+      navigate('/admin/products/manage');
     } catch (error) {
-      toast.error(error.message || 'Failed to create product');
+      toast.error(error.message || 'Failed to update product');
     } finally {
       setLoading(false);
     }
   };
 
+  if (fetching) {
+    return <div>Loading product details...</div>;
+  }
+
   return (
     <div className="admin-form-container">
-      <h2>Add New Product</h2>
+      <h2>Edit Product</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="form-group">
           <label htmlFor="name">Product Name *</label>
@@ -119,7 +138,6 @@ const AddProduct = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="e.g., Diamond Solitaire Ring"
             required
           />
         </div>
@@ -132,7 +150,6 @@ const AddProduct = () => {
             name="sku"
             value={formData.sku}
             onChange={handleChange}
-            placeholder="e.g., RING-001"
           />
         </div>
         
@@ -144,7 +161,6 @@ const AddProduct = () => {
             name="price"
             value={formData.price}
             onChange={handleChange}
-            placeholder="0.00"
             min="0"
             step="0.01"
             required
@@ -176,7 +192,6 @@ const AddProduct = () => {
             name="description"
             value={formData.description}
             onChange={handleChange}
-            placeholder="Detailed description of the product..."
             rows="5"
             required
           ></textarea>
@@ -184,7 +199,7 @@ const AddProduct = () => {
 
         <div style={{ display: 'flex', gap: '20px' }}>
           <div className="form-group" style={{ flex: 1 }}>
-            <label htmlFor="stock">Initial Stock *</label>
+            <label htmlFor="stock">Stock *</label>
             <input
               type="number"
               id="stock"
@@ -216,7 +231,6 @@ const AddProduct = () => {
             name="material"
             value={formData.material}
             onChange={handleChange}
-            placeholder="e.g., 18k Gold, Platinum"
           />
         </div>
 
@@ -233,7 +247,12 @@ const AddProduct = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="images">Product Images (up to 6)</label>
+          <label htmlFor="images">Update Product Images (up to 6) - Note: Uploading new images will replace existing ones</label>
+          {existingImages.length > 0 && imageFiles.length === 0 && (
+            <div style={{marginBottom: '10px', fontSize: '0.9rem', color: '#666'}}>
+              Current images: {existingImages.length}
+            </div>
+          )}
           <input
             type="file"
             id="images"
@@ -245,11 +264,11 @@ const AddProduct = () => {
         </div>
 
         <button type="submit" className="submit-btn" disabled={loading}>
-          {loading ? 'Creating Product...' : 'Create Product'}
+          {loading ? 'Updating Product...' : 'Update Product'}
         </button>
       </form>
     </div>
   );
 };
 
-export default AddProduct;
+export default EditProduct;

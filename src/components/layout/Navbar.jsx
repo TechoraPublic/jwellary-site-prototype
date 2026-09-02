@@ -86,6 +86,24 @@ const Navbar = () => {
               </div>
               {dropdownOpen && (
                 <div className="user-dropdown-menu">
+                  {user.role !== 'admin' && (
+                    <Link 
+                      to="/profile" 
+                      onClick={() => setDropdownOpen(false)} 
+                      style={{ display: 'block', padding: '10px 15px', color: '#333', textDecoration: 'none', borderBottom: '1px solid #eee' }}
+                    >
+                      My Profile
+                    </Link>
+                  )}
+                  {user.role === 'admin' && (
+                    <Link
+                      to="/admin"
+                      onClick={() => setDropdownOpen(false)}
+                      style={{ display: 'block', padding: '10px 15px', color: '#333', textDecoration: 'none', borderBottom: '1px solid #eee' }}
+                    >
+                      Admin Panel
+                    </Link>
+                  )}
                   <button onClick={() => { logout(); setDropdownOpen(false); }} className="logout-btn">Logout</button>
                 </div>
               )}
