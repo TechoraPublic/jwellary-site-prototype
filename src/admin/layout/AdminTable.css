@@ -21,17 +21,19 @@
 }
 
 .btn-primary {
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--color-navy, #031637);
+  color: var(--color-ivory, #F8F5EE);
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  border: 1px solid var(--color-navy, #031637);
+  transition: all 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #2980b9;
+  background-color: transparent;
+  color: var(--color-navy, #031637);
 }
 
 .admin-table {

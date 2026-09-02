@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { adminService } from '../../../services/admin.service';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import { 
-  Package, 
-  Grid, 
-  ShoppingBag, 
-  Users, 
-  Plus, 
-  ListOrdered, 
-  TrendingUp, 
-  Box, 
+import {
+  Package,
+  Grid,
+  ShoppingBag,
+  Users,
+  Plus,
+  ListOrdered,
+  TrendingUp,
+  Box,
   AlertTriangle,
   ChevronRight
 } from 'lucide-react';
@@ -19,6 +19,14 @@ const Dashboard = () => {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const salesOverView = [
+    {
+      id: 1,
+
+    }
+  ]
+
+
   useEffect(() => {
     const fetchStats = async () => {
       try {
@@ -26,6 +34,7 @@ const Dashboard = () => {
         const response = await adminService.getDashboardStats();
         if (response.success) {
           setStats(response.data);
+
         }
       } catch (error) {
         toast.error('Failed to load dashboard statistics');
@@ -54,11 +63,11 @@ const Dashboard = () => {
 
   return (
     <div className="admin-dashboard">
-      
+
       {/* Dashboard Header */}
       <div className="admin-dashboard-header">
         <h2>Dashboard</h2>
-        <p>Good morning, Admin. Here's an overview of your jewellery store.</p>
+        <p>Hello Admin. Here's an overview of your jewellery store.</p>
       </div>
 
       {/* Top Statistics Cards */}
@@ -120,9 +129,9 @@ const Dashboard = () => {
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '200px' }}>
             {stats.totalRevenue > 0 ? (
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <div style={{ 
-                  backgroundColor: 'rgba(217, 164, 65, 0.1)', 
-                  padding: '20px', 
+                <div style={{
+                  backgroundColor: 'rgba(217, 164, 65, 0.1)',
+                  padding: '20px',
                   borderRadius: '50%',
                   color: 'var(--color-gold)'
                 }}>
@@ -189,7 +198,7 @@ const Dashboard = () => {
               View All <ChevronRight size={16} />
             </Link>
           </div>
-          
+
           {stats.recentOrders && stats.recentOrders.length > 0 ? (
             <div className="premium-table-wrapper">
               <table className="premium-table">
@@ -228,7 +237,7 @@ const Dashboard = () => {
         {/* Inventory Overview */}
         <div className="dashboard-panel" style={{ gridColumn: 'span 1' }}>
           <h3 className="dashboard-panel-title">Inventory Overview</h3>
-          
+
           {stats.inventoryStats ? (
             <ul className="status-list" style={{ marginTop: '20px' }}>
               <li className="status-item" style={{ padding: '24px 0' }}>
