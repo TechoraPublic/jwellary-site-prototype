@@ -12,15 +12,16 @@ const Cart = () => {
   }, []);
 
   const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-  const discount = subtotal * 0.15; // 15% discount
-  const total = subtotal - discount;
+  const total = subtotal;
 
   if (cartItems.length === 0) {
     return (
       <div className="container" style={{ paddingTop: '160px', minHeight: '80vh', textAlign: 'center', backgroundColor: 'var(--color-ivory)' }}>
         <h1 style={{ marginBottom: '2rem', color: 'var(--color-navy)' }}>Your Cart</h1>
         <p style={{ color: 'var(--color-navy-light)', marginBottom: '2rem' }}>Your cart is currently empty.</p>
-        <Link to="/shop" className="btn btn-primary">Continue Shopping</Link>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Link to="/shop" className="btn btn-primary">Continue Shopping</Link>
+        </div>
       </div>
     );
   }
@@ -60,15 +61,11 @@ const Cart = () => {
             <span>Subtotal</span>
             <span>₹{subtotal.toFixed(2)}</span>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem', color: 'var(--color-gold)' }}>
-            <span>Discount (15%)</span>
-            <span>-₹{discount.toFixed(2)}</span>
-          </div>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', fontSize: '1.25rem', fontWeight: 'bold', borderTop: '1px solid rgba(217, 164, 65, 0.3)', paddingTop: '1rem', color: 'var(--color-navy)' }}>
             <span>Total Payable</span>
             <span>₹{total.toFixed(2)}</span>
           </div>
-          <button className="btn btn-primary" style={{ width: '100%' }}>Proceed to Checkout</button>
+          <Link to="/checkout" className="btn btn-primary" style={{ display: 'block', width: '100%', textAlign: 'center', textDecoration: 'none' }}>Proceed to Checkout</Link>
         </div>
       </div>
 

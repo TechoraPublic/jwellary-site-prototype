@@ -1,21 +1,36 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import { getProductById } from '../../data/products';
 import { ShopContext } from '../../context/ShopContext';
+import { productService } from '../../services/product.service';
+import { normalizeProduct } from '../../utils/productMapper';
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { addToCart, toggleWishlist, wishlistItems } = useContext(ShopContext);
 
   useEffect(() => {
-    const fetchedProduct = getProductById(productId);
-    setProduct(fetchedProduct);
-    if (fetchedProduct) {
-      setSelectedImage(fetchedProduct.images?.[0] || fetchedProduct.image);
-    }
+    const fetchProduct = async () => {
+      try {
+        const response = await productService.getProductById(productId);
+        if (response.success) {
+          const fetchedProduct = normalizeProduct(response.data);
+          setProduct(fetchedProduct);
+          if (fetchedProduct) {
+            setSelectedImage(fetchedProduct.images?.[0] || fetchedProduct.image);
+          }
+        }
+      } catch (error) {
+        console.error("Failed to fetch product:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
     window.scrollTo(0, 0);
   }, [productId]);
 
@@ -90,20 +105,11 @@ const ProductDetails = () => {
               ₹{product.price?.toLocaleString()}
             </p>
           </div>
-          <p style={{ fontSize: '0.9rem', color: 'var(--color-gray-dark)', marginBottom: '1.5rem' }}>
-            Inclusive of all taxes
-          </p>
-
-          <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-            <span style={{ padding: '0.5rem 1rem', border: '1px solid var(--color-gray-light)', borderRadius: '20px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>✨ Anti-Tarnish</span>
-            <span style={{ padding: '0.5rem 1rem', border: '1px solid var(--color-gray-light)', borderRadius: '20px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>👶 Skin Safe Jewellery</span>
-            <span style={{ padding: '0.5rem 1rem', border: '1px solid var(--color-gray-light)', borderRadius: '20px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>🥇 18K Gold Tone</span>
-          </div>
 
           <div style={{ marginBottom: '3rem', lineHeight: '1.8', color: 'var(--color-gray-dark)' }}>
             <h4 style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>DESCRIPTION:</h4>
             <p style={{ marginBottom: '1rem' }}>{product.description}</p>
-            <p style={{ marginBottom: '1.5rem' }}>A dazzling piece adorned with radiant stones, exuding timeless glamour. Lightweight yet durable, its polished finish creates a sparkling effect with every movement. Secured with a comfortable clasp, it makes a versatile piece perfect for special occasions and everyday elegance.</p>
+            <p style={{ marginBottom: '1.5rem' }}></p>
 
             <h4 style={{ marginBottom: '0.5rem', fontWeight: 'bold' }}>STYLING TIP:</h4>
             <p style={{ marginBottom: '1.5rem' }}>Pair with sparkling studs to create a coordinated festive look.</p>
@@ -139,17 +145,6 @@ const ProductDetails = () => {
               <Heart size={24} fill={wishlistItems.some(item => item.id === product.id) ? 'red' : 'none'} color={wishlistItems.some(item => item.id === product.id) ? 'red' : 'currentColor'} />
             </button>
           </div>
-
-          {/* <div style={{ marginTop: '3rem', borderTop: '1px solid var(--color-gray-light)', paddingTop: '2rem' }}>
-            <h4 style={{ marginBottom: '1rem', fontFamily: 'var(--font-sans)', textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem' }}>
-              Shipping & Returns
-            </h4>
-            <ul style={{ color: 'var(--color-gray-dark)', fontSize: '0.9rem', lineHeight: '2' }}>
-              <li>In stock - ready to ship</li>
-              <li>Complimentary standard shipping on all orders</li>
-              <li>Free returns within 30 days</li>
-            </ul>
-          </div> */}
         </div>
 
       </div>

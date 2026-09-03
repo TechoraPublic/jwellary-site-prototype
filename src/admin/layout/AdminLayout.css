@@ -38,6 +38,13 @@
   margin-top: 5px;
 }
 
+.admin-sidebar-logo {
+  max-width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .admin-nav {
   padding: 20px 0;
   flex: 1;
@@ -385,5 +392,85 @@
   }
   .admin-content-area {
     padding: 20px;
+  }
+}
+
+/* =========================================
+   Mobile Hamburger Menu Styles
+   ========================================= */
+
+.admin-mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .admin-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-navy, #031637);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(217, 164, 65, 0.2);
+  }
+  
+  .admin-mobile-logo h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-gold, #D9A441);
+    font-family: var(--font-serif, 'Cormorant Garamond', serif);
+  }
+  
+  .admin-mobile-logo p {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: rgba(248, 245, 238, 0.7);
+    margin: 2px 0 0 0;
+  }
+  
+  .admin-mobile-menu-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    border-right: 1px solid rgba(217, 164, 65, 0.2);
+  }
+  
+  .admin-sidebar.open {
+    left: 0;
+  }
+  
+  .admin-nav {
+    display: block;
+    overflow-x: hidden;
+    padding: 0;
+  }
+  
+  .admin-nav ul {
+    display: block;
+  }
+
+  .admin-mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
   }
 }

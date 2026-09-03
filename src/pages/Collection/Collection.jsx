@@ -2,29 +2,67 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import ProductGrid from '../../components/product/ProductGrid';
-import { products as allProducts } from '../../data/products';
 import { SlidersHorizontal, X } from 'lucide-react';
+import { categoryService } from '../../services/category.service';
+import { productService } from '../../services/product.service';
+import { normalizeProducts } from '../../utils/productMapper';
 import './Collection.css';
 
 const Collection = () => {
   const { categoryId } = useParams();
   
+  const [allProducts, setAllProducts] = useState([]);
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState(categoryId || 'All');
   const [sortOption, setSortOption] = useState('Featured');
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
   
   const [visibleCount, setVisibleCount] = useState(12);
   
-  const categories = ['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings'];
+  const [categories, setCategories] = useState(['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings']);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await categoryService.getAllCategories();
+        if (response.success && response.data) {
+          const categoryNames = response.data.map(cat => cat.name);
+          setCategories(['All', ...categoryNames]);
+        }
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await productService.getAllProducts();
+        if (response.success) {
+          setAllProducts(normalizeProducts(response.data));
+        }
+      } catch (error) {
+        console.error("Failed to load products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     let filtered = [...allProducts];
 
     // Filter by category
     if (activeCategory !== 'All') {
-      filtered = filtered.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+      filtered = filtered.filter(p => {
+        const catStr = typeof p.category === 'string' ? p.category : (p.category?.name || '');
+        return catStr.toLowerCase() === activeCategory.toLowerCase();
+      });
     }
 
     // Filter by search
@@ -49,7 +87,7 @@ const Collection = () => {
 
     setProducts(filtered);
     setVisibleCount(12);
-  }, [searchQuery, activeCategory, sortOption, categoryId]);
+  }, [searchQuery, activeCategory, sortOption, categoryId, allProducts]);
 
   // Update active category if URL params change
   useEffect(() => {
@@ -228,7 +266,7 @@ const Collection = () => {
         <>
           <ProductGrid products={products.slice(0, visibleCount)} columns={4} />
           {visibleCount < products.length && (
-            <div className="text-center" style={{ marginTop: '3.5rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
               <button 
                 className="btn btn-primary" 
                 onClick={() => setVisibleCount(prev => prev + 12)}

@@ -50,7 +50,8 @@ const NewArrivals = () => {
         <p style={{ color: '#666', marginTop: '10px' }}>Select which products should appear in the New Arrivals section on the customer website.</p>
       </div>
       
-      <table className="admin-table">
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Image</th>
@@ -94,6 +95,7 @@ const NewArrivals = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

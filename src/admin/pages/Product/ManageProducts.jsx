@@ -10,6 +10,8 @@ const ManageProducts = () => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [stockFilter, setStockFilter] = useState('all');
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [itemToDelete, setItemToDelete] = useState(null);
 
   const fetchProducts = async () => {
     try {
@@ -34,8 +36,8 @@ const ManageProducts = () => {
     let result = products;
 
     if (searchTerm) {
-      result = result.filter(p => 
-        p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      result = result.filter(p =>
+        p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (p.sku && p.sku.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
@@ -51,16 +53,28 @@ const ManageProducts = () => {
     setFilteredProducts(result);
   }, [searchTerm, stockFilter, products]);
 
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this product?')) {
-      try {
-        await productService.softDeleteProduct(id);
-        toast.success('Product deleted successfully');
-        fetchProducts();
-      } catch (error) {
-        toast.error(error.message || 'Failed to delete product');
-      }
+  const triggerDelete = (id) => {
+    setItemToDelete(id);
+    setDeleteModalOpen(true);
+  };
+
+  const confirmDelete = async () => {
+    if (!itemToDelete) return;
+    try {
+      await productService.softDeleteProduct(itemToDelete);
+      toast.success('Product deleted successfully');
+      fetchProducts();
+    } catch (error) {
+      toast.error(error.message || 'Failed to delete product');
+    } finally {
+      setDeleteModalOpen(false);
+      setItemToDelete(null);
     }
+  };
+
+  const cancelDelete = () => {
+    setDeleteModalOpen(false);
+    setItemToDelete(null);
   };
 
   if (loading) {
@@ -69,21 +83,19 @@ const ManageProducts = () => {
 
   return (
     <div className="admin-table-container">
-      <div className="admin-table-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+      <div className="admin-table-header">
         <h2>Manage Products</h2>
-        
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <input 
-            type="text" 
-            placeholder="Search name or SKU..." 
+
+        <div className="admin-table-controls">
+          <input
+            type="text"
+            placeholder="Search name or SKU..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}
           />
-          <select 
-            value={stockFilter} 
+          <select
+            value={stockFilter}
             onChange={(e) => setStockFilter(e.target.value)}
-            style={{ padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}
           >
             <option value="all">All Stock</option>
             <option value="in">In Stock</option>
@@ -93,8 +105,9 @@ const ManageProducts = () => {
           <Link to="/admin/products/add" className="btn-primary">Add New Product</Link>
         </div>
       </div>
-      
-      <table className="admin-table">
+
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Image</th>
@@ -127,7 +140,7 @@ const ManageProducts = () => {
                 <td>₹{product.price.toLocaleString()}</td>
                 <td>{product.category?.name || 'N/A'}</td>
                 <td>
-                  <span style={{ 
+                  <span style={{
                     color: product.stock === 0 ? 'red' : product.stock <= (product.lowStockThreshold || 5) ? 'orange' : 'green',
                     fontWeight: 'bold'
                   }}>
@@ -137,13 +150,29 @@ const ManageProducts = () => {
                 <td>{product.isDeleted ? 'Deleted' : 'Active'}</td>
                 <td className="actions-cell">
                   <Link to={`/admin/products/edit/${product._id}`} className="btn-edit">Edit</Link>
-                  <button onClick={() => handleDelete(product._id)} className="btn-delete">Delete</button>
+                  <button onClick={() => triggerDelete(product._id)} className="btn-delete">Delete</button>
                 </td>
               </tr>
             ))
           )}
         </tbody>
       </table>
+      </div>
+
+      {deleteModalOpen && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(31, 41, 55, 0.7)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000 }}>
+          <div style={{ backgroundColor: '#FDFBF7', padding: '40px', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)', textAlign: 'center', width: '450px', maxWidth: '90%' }}>
+            <h3 style={{ fontFamily: 'var(--font-serif, serif)', color: '#0F172A', fontSize: '28px', marginBottom: '20px', fontWeight: 'normal' }}>Remove Item</h3>
+            <p style={{ color: '#0F172A', marginBottom: '32px', fontSize: '16px', lineHeight: '1.5' }}>
+              Are you sure you want to remove this product from your store?
+            </p>
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+              <button onClick={cancelDelete} style={{ padding: '12px 40px', backgroundColor: 'transparent', border: '1px solid #D9A441', color: '#D9A441', borderRadius: '4px', cursor: 'pointer', fontWeight: '600', letterSpacing: '1px', flex: 1 }}>NO</button>
+              <button onClick={confirmDelete} style={{ padding: '12px 40px', backgroundColor: '#FF5252', border: 'none', color: 'white', borderRadius: '4px', cursor: 'pointer', fontWeight: '600', letterSpacing: '1px', flex: 1 }}>YES</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

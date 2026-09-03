@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const redirect = searchParams.get('redirect') || '/';
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -32,7 +36,7 @@ const Login = () => {
           if (data.data && data.data.role === 'admin') {
             navigate('/admin');
           } else {
-            navigate('/'); // Redirect to home on success
+            navigate(redirect); // Redirect to original destination
           }
         }, 500);
       }

@@ -6,6 +6,7 @@ import StoreLayout from '../layouts/StoreLayout';
 import AuthLayout from '../layouts/AuthLayout';
 import AdminLayout from '../admin/layout/AdminLayout';
 import AdminRoute from './AdminRoute';
+import ProtectedRoute from './ProtectedRoute';
 
 // Pages
 import Home from '../pages/Home/Home';
@@ -16,6 +17,8 @@ import About from '../pages/About/About';
 import Cart from '../pages/Cart/Cart';
 import Wishlist from '../pages/Wishlist/Wishlist';
 import Contact from '../pages/Contact/Contact';
+import Checkout from '../pages/Checkout/Checkout';
+import OrderSuccess from '../pages/Checkout/OrderSuccess';
 import Login from '../pages/Auth/Login';
 import Signup from '../pages/Auth/Signup';
 import Profile from '../pages/Profile/Profile';
@@ -51,9 +54,15 @@ const AppRoutes = () => {
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
+        
+        <Route element={<ProtectedRoute />}>
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order-success/:orderId" element={<OrderSuccess />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/profile" element={<Profile />} />
       </Route>
 
       {/* Auth Routes */}

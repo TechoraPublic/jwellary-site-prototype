@@ -94,3 +94,56 @@
 .text-center {
   text-align: center !important;
 }
+
+/* =========================================
+   Responsive Design for Admin Tables
+   ========================================= */
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-table-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-table-controls input,
+.admin-table-controls select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .admin-table-container {
+    padding: 15px;
+  }
+  
+  .admin-table-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .admin-table-header h2 {
+    text-align: center;
+  }
+  
+  .admin-table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-primary {
+    text-align: center;
+  }
+  
+  .admin-table {
+    min-width: 700px;
+  }
+}

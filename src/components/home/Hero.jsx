@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
         <div style={{ overflow: 'hidden' }}>
           <div ref={btnRef}>
-            <Link to="/collection/rings" className="btn btn-outline hero-btn">
+            <Link to="/collection/rings" className="btn btn-primary hero-btn">
               Explore Collection
             </Link>
           </div>

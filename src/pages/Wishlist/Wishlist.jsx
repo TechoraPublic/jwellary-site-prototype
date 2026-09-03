@@ -20,7 +20,9 @@ const Wishlist = () => {
       <div className="container" style={{ paddingTop: '160px', minHeight: '80vh', textAlign: 'center', backgroundColor: 'var(--color-ivory)' }}>
         <h1 style={{ marginBottom: '2rem', color: 'var(--color-navy)', fontFamily: 'var(--font-serif)' }}>Your Wishlist</h1>
         <p style={{ color: 'var(--color-navy-light)', marginBottom: '2rem' }}>You haven't added any items to your wishlist yet.</p>
-        <Link to="/shop" className="btn btn-primary">Explore Collections</Link>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Link to="/shop" className="btn btn-primary">Explore Collections</Link>
+        </div>
       </div>
     );
   }

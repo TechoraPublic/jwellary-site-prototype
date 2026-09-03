@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { categoryService } from '../../../services/category.service';
+import '../Product/ProductForm.css'; // Reusing the clean card styling from Product forms
 
 const EditCategory = () => {
   const { id } = useParams();
@@ -60,13 +61,20 @@ const EditCategory = () => {
   };
 
   if (fetching) {
-    return <div>Loading category details...</div>;
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: '#73798A' }}>
+        <p>Loading category details...</p>
+      </div>
+    );
   }
 
   return (
-    <div className="admin-form-container">
+    <div className="admin-product-form-container">
       <h2>Edit Category</h2>
+      <p className="form-subtitle">Update the details for this category.</p>
+      
       <form onSubmit={handleSubmit}>
+        
         <div className="form-group">
           <label htmlFor="name">Category Name *</label>
           <input
@@ -92,9 +100,12 @@ const EditCategory = () => {
           ></textarea>
         </div>
 
-        <button type="submit" className="submit-btn" disabled={loading}>
-          {loading ? 'Updating...' : 'Update Category'}
-        </button>
+        <div className="form-actions">
+          <Link to="/admin/categories/manage" className="btn-cancel">Cancel</Link>
+          <button type="submit" className="btn-submit" disabled={loading}>
+            {loading ? 'Updating...' : 'Update Category'}
+          </button>
+        </div>
       </form>
     </div>
   );

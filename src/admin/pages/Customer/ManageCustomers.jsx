@@ -39,7 +39,8 @@ const ManageCustomers = () => {
         <h2>Manage Customers</h2>
       </div>
       
-      <table className="admin-table">
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -76,6 +77,7 @@ const ManageCustomers = () => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

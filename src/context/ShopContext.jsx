@@ -4,8 +4,36 @@ import { toast } from 'react-toastify';
 export const ShopContext = createContext(null);
 
 export const ShopProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
-  const [wishlistItems, setWishlistItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem('aurora_cart');
+      if (savedCart) {
+        const parsed = JSON.parse(savedCart);
+        // Ensure only items with valid ObjectIds are kept in cart to prevent checkout errors
+        return parsed.filter(item => item.id && item.id.match(/^[0-9a-fA-F]{24}$/));
+      }
+      return [];
+    } catch (error) {
+      return [];
+    }
+  });
+
+  const [wishlistItems, setWishlistItems] = useState(() => {
+    try {
+      const savedWishlist = localStorage.getItem('aurora_wishlist');
+      return savedWishlist ? JSON.parse(savedWishlist) : [];
+    } catch (error) {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem('aurora_cart', JSON.stringify(cartItems));
+  }, [cartItems]);
+
+  useEffect(() => {
+    localStorage.setItem('aurora_wishlist', JSON.stringify(wishlistItems));
+  }, [wishlistItems]);
 
   const addToCart = (product) => {
     setCartItems(prev => {
@@ -54,8 +82,12 @@ export const ShopProvider = ({ children }) => {
     });
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   return (
-    <ShopContext.Provider value={{ cartItems, wishlistItems, addToCart, toggleWishlist, removeFromWishlist, removeFromCart, updateQuantity }}>
+    <ShopContext.Provider value={{ cartItems, wishlistItems, addToCart, toggleWishlist, removeFromWishlist, removeFromCart, updateQuantity, clearCart }}>
       {children}
     </ShopContext.Provider>
   );

@@ -1,31 +1,68 @@
 import React, { useEffect, useState } from 'react';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import ProductGrid from '../../components/product/ProductGrid';
-import { products as allProducts } from '../../data/products';
 import ScrollReveal from '../../components/animations/ScrollReveal';
 import GoldDivider from '../../components/animations/GoldDivider';
+import { productService } from '../../services/product.service';
+import { categoryService } from '../../services/category.service';
+import { normalizeProducts } from '../../utils/productMapper';
 import "../Collection/Collection.css"; // Import the same CSS for mobile filters
 
 const NewArrivals = () => {
+  const [allProducts, setAllProducts] = useState([]);
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
   const [sortOption, setSortOption] = useState('Newest');
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
   
   const [visibleCount, setVisibleCount] = useState(12);
   
-  const categories = ['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings'];
-  
-  // Only get products marked as new arrival
-  const newArrivals = allProducts.filter(p => p.isNewArrival);
+  const [categories, setCategories] = useState(['All', 'Bangles', 'Bracelets', 'Earrings', 'Necklaces', 'Rings']);
 
   useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await categoryService.getAllCategories();
+        if (response.success && response.data) {
+          const categoryNames = response.data.map(cat => cat.name);
+          setCategories(['All', ...categoryNames]);
+        }
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await productService.getAllProducts();
+        if (response.success) {
+          setAllProducts(normalizeProducts(response.data));
+        }
+      } catch (error) {
+        console.error("Failed to load products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    // Only get products marked as new arrival
+    const newArrivals = allProducts.filter(p => p.isNewArrival);
     let filtered = [...newArrivals];
 
     // Filter by category
     if (activeCategory !== 'All') {
-      filtered = filtered.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+      filtered = filtered.filter(p => {
+        const catStr = typeof p.category === 'string' ? p.category : (p.category?.name || '');
+        return catStr.toLowerCase() === activeCategory.toLowerCase();
+      });
     }
 
     // Filter by search
@@ -50,7 +87,7 @@ const NewArrivals = () => {
 
     setProducts(filtered);
     setVisibleCount(12);
-  }, [searchQuery, activeCategory, sortOption]);
+  }, [searchQuery, activeCategory, sortOption, allProducts]);
 
   return (
     <div style={{ paddingTop: '120px', minHeight: '80vh' }} className="container section">
@@ -226,7 +263,7 @@ const NewArrivals = () => {
           <>
             <ProductGrid products={products.slice(0, visibleCount)} columns={4} />
             {visibleCount < products.length && (
-              <div className="text-center" style={{ marginTop: '3.5rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
                 <button 
                   className="btn btn-primary" 
                   onClick={() => setVisibleCount(prev => prev + 12)}

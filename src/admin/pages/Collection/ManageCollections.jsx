@@ -49,7 +49,8 @@ const ManageCollections = () => {
         <Link to="/admin/collections/add" className="btn-primary">Add New Collection</Link>
       </div>
       
-      <table className="admin-table">
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Image</th>
@@ -88,6 +89,7 @@ const ManageCollections = () => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { categoryService } from '../../../services/category.service';
+import '../Product/ProductForm.css'; // Reusing the clean card styling from Product forms
 
 const AddCategory = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     description: ''
@@ -27,8 +30,9 @@ const AddCategory = () => {
       setLoading(true);
       await categoryService.createCategory(formData);
       toast.success('Category created successfully!');
-      // Reset form
+      // Reset form & redirect
       setFormData({ name: '', description: '' });
+      navigate('/admin/categories/manage');
     } catch (error) {
       toast.error(error.message || 'Failed to create category');
     } finally {
@@ -37,9 +41,12 @@ const AddCategory = () => {
   };
 
   return (
-    <div className="admin-form-container">
+    <div className="admin-product-form-container">
       <h2>Add New Category</h2>
+      <p className="form-subtitle">Create a new category for your store.</p>
+      
       <form onSubmit={handleSubmit}>
+        
         <div className="form-group">
           <label htmlFor="name">Category Name *</label>
           <input
@@ -65,9 +72,12 @@ const AddCategory = () => {
           ></textarea>
         </div>
 
-        <button type="submit" className="submit-btn" disabled={loading}>
-          {loading ? 'Creating...' : 'Create Category'}
-        </button>
+        <div className="form-actions">
+          <Link to="/admin/categories/manage" className="btn-cancel">Cancel</Link>
+          <button type="submit" className="btn-submit" disabled={loading}>
+            {loading ? 'Creating...' : 'Create Category'}
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -42,20 +42,22 @@ const ManageInventory = () => {
 
   return (
     <div className="admin-table-container">
-      <div className="admin-table-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div className="admin-table-header">
         <h2>Manage Inventory</h2>
-        <select 
-          value={filter} 
-          onChange={(e) => setFilter(e.target.value)}
-          style={{ padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}
-        >
-          <option value="all">All Products</option>
-          <option value="low">Low Stock</option>
-          <option value="out">Out of Stock</option>
-        </select>
+        <div className="admin-table-controls">
+          <select 
+            value={filter} 
+            onChange={(e) => setFilter(e.target.value)}
+          >
+            <option value="all">All Products</option>
+            <option value="low">Low Stock</option>
+            <option value="out">Out of Stock</option>
+          </select>
+        </div>
       </div>
       
-      <table className="admin-table">
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Product</th>
@@ -111,6 +113,7 @@ const ManageInventory = () => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

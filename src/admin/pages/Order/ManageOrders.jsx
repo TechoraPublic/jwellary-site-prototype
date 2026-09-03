@@ -55,7 +55,8 @@ const ManageOrders = () => {
         <h2>Manage Orders</h2>
       </div>
       
-      <table className="admin-table">
+      <div className="table-responsive-wrapper">
+        <table className="admin-table">
         <thead>
           <tr>
             <th>Order ID</th>
@@ -98,6 +99,7 @@ const ManageOrders = () => {
           )}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };

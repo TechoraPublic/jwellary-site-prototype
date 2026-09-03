@@ -1,14 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from '../../components/home/Hero';
 import ProductGrid from '../../components/product/ProductGrid';
-import { products as allProducts } from '../../data/products';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../../components/animations/ScrollReveal';
 import ImageReveal from '../../components/animations/ImageReveal';
 import GoldDivider from '../../components/animations/GoldDivider';
+import { productService } from '../../services/product.service';
+import { normalizeProducts } from '../../utils/productMapper';
 
 const Home = () => {
+  const [allProducts, setAllProducts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(8);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await productService.getAllProducts();
+        if (response.success) {
+          setAllProducts(normalizeProducts(response.data));
+        }
+      } catch (error) {
+        console.error("Failed to load products", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
   const displayedProducts = allProducts.slice(0, visibleCount);
 
   return (
@@ -29,7 +49,7 @@ const Home = () => {
           <ProductGrid products={displayedProducts} columns={4} />
         </ScrollReveal>
 
-        <ScrollReveal className="text-center" style={{ marginTop: '4rem' }} delay={0.4}>
+        <ScrollReveal style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }} delay={0.4}>
           {visibleCount < allProducts.length ? (
             <button 
               onClick={() => setVisibleCount(prev => prev + 8)} 
