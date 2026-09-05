@@ -35,7 +35,7 @@ const About = () => {
         <ScrollReveal>
           <h2 style={{ marginBottom: '2rem', color: 'var(--color-navy)' }}>The Beginning</h2>
           <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
-            Founded in 1995, Aurora emerged from a simple desire: to create jewelry that speaks to the soul. What began as a small atelier in the heart of the city has grown into a globally recognized symbol of luxury and elegance.
+            Founded in 1995, Blue Bells emerged from a simple desire: to create jewelry that speaks to the soul. What began as a small atelier in the heart of the city has grown into a globally recognized symbol of luxury and elegance.
           </p>
           <p style={{ marginBottom: '1.5rem', lineHeight: '1.8' }}>
             Our founders believed that every piece of jewelry should tell a story, a philosophy that continues to guide our artisans today. We blend traditional techniques with modern innovation to craft timeless masterpieces.

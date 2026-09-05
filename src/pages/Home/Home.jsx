@@ -51,8 +51,8 @@ const Home = () => {
 
         <ScrollReveal style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }} delay={0.4}>
           {visibleCount < allProducts.length ? (
-            <button 
-              onClick={() => setVisibleCount(prev => prev + 8)} 
+            <button
+              onClick={() => setVisibleCount(prev => prev + 8)}
               className="btn btn-primary"
               style={{ cursor: 'pointer' }}
             >
@@ -72,7 +72,7 @@ const Home = () => {
           <ScrollReveal>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--color-gold)' }}>The Art of Fine Jewellery</h2>
             <p style={{ marginBottom: '2rem', lineHeight: '1.8' }}>
-              For over three decades, Aurora has been synonymous with unparalleled craftsmanship and timeless elegance. Every piece is meticulously crafted by master artisans using ethically sourced materials of the highest quality.
+              For over three decades, Blue Bells has been synonymous with unparalleled craftsmanship and timeless elegance. Every piece is meticulously crafted by master artisans using ethically sourced materials of the highest quality.
             </p>
             <Link to="/about" className="btn btn-outline" style={{ borderColor: 'var(--color-ivory)', color: 'var(--color-ivory)' }}>
               Discover Our Story
